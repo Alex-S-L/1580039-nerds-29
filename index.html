@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
@@ -16,54 +17,50 @@
         </ul>
       </nav>
       <div>
+        <a href="">
+          <img src="#" alt="корзина">
           <p>корзина</p>
-          <ul>
-            <li>
-              <p><a href=""></a></p>
-            </li>
-          </ul>
-        </div>
+        </a>
+      </div>
+        <ul>
+          <li>
+            <div>
+              <p><span>Долго, дорого, скрупулезно</span></p>
+              <p>Математически выверенный дизайн для вашего сайта или мобильног приложения</p>
+              <a href="">узнать больше</a>
+            </div>
+            <img src="#" alt="айфоны">
+          </li>
+          <li>
+            <div>
+              <p><span>Только ночь, только хардкор.</span></p>
+              <p>Работать днём, как все? Мы против этого. Ближе к полуночи работа только начинается</p>
+              <a href="">узнать больше</a>
+            </div>
+            <img src="#" alt="айфониайпад">
+          </li>
+        </ul>
     </header>
 
     <main>
       <h1 class="visually-hidden">Дизант-студия nerds</h1>
       <section>
-        <!-- пока что слабо представляю себе как должен реализовываться слайдер, но предположу. -->
         <h2 class="visually-hidden">услуги</h2>
-        <figure>
-          <div>
-            <p><strong>Долго, дорого, скрупулезно.</strong></p>
-            <p>математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-          </div>
-          <div class="three-iphones">
-            <img src="#" alt="">
-          </div>
-        </figure>
-        <figure>
-          <div>
-            <p><strong>Любим математику как никто другой.</strong></p>
-            <p>Никакого креатива, только математически выверенные формулы для расчёта идеальных пропорций.</p>
-          </div>
-          <div class="three-iphones">
-            <img src="#" alt="">
-          </div>
-        </figure>
-        <a href=""></a>
         <ul>
             <li>
-              <img src="#" alt="cites">
+              <img src="#" alt="сайты">
               <h3>веб-сайты</h3>
               <p>Мир никогда не будет прежним после того как увидит ваш сайт</p>
               <a href=""></a>
             </li>
             <li>
-              <img src="#" alt="applications">
+              <img src="#" alt="приложения">
               <h3>приложения</h3>
               <p>Покорите топ-10 приложений в AppStore и Google Play</p>
               <a href=""></a>
             </li>
             <li>
-              <img src="#" alt="presentations">
+              <img src="#" alt="презентации">
               <h3>презентации</h3>
               <p>Вы даже не подозреваете, насколько вы изумительны!</p>
               <a href=""></a>
@@ -74,9 +71,9 @@
       <section>
         <h2 class="visually-hidden">О нас</h2>
         <div>
-          <p><b>Мы — маленькая, но гордая дизайн-студия из Краснодара.</b></p>
+          <p><span>Мы — маленькая, но гордая дизайн-студия из Краснодара.</span></p>
           <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-          <p><b>Выполняем заказы на разработку:</b></p>
+          <p><span>Выполняем заказы на разработку:</span></p>
           <ul>
             <li>Веб-сайтов любой сложности</li>
             <li>Мобильных приложений для iOS и Android</li>
@@ -85,12 +82,22 @@
         </div>
         <div>
           <img src="#" alt="">
-          <p><b>с 2004 года любим точность во всем:</b></p>
-          <ul>
-            <li><p><b><span>146<sup>%</sup></span></b><span>Уровень самоотдачи</span></p></li>
-            <li><p><b><span>100<sup>%</sup></span></b><span>Соблюдение сроков</span></p></li>
-            <li><p><b><span>50<sup>%</sup></span></b><span>Минимальная предоплата</span></p></li>
-          </ul>
+          <table>
+            <caption>с 2004 года любим точность во всем:</caption>
+            <tr>
+              <td class="figure">146</td>
+              <td class="percetn">%</td>
+              <td class="figure">100</td>
+              <td class="percetn">%</td>
+              <td class="figure">50</td>
+              <td class="percetn">%</td>
+            </tr>
+            <tr>
+              <td colspan="2">Уровень самоотдачи</td>
+              <td colspan="2">Соблюдение сроков</td>
+              <td colspan="2">Минимальная предоплата</td>
+            </tr>
+          </table>
         </div>
       </section>
 
@@ -107,14 +114,12 @@
 
     <footer>
       <div class="map">
-        <iframe src="#"></iframe>
-        <address>
-          <p><b>NЁRDS DESIGN STUDIO</b></p>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p><a href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
-          <a href="">Напишите нам</a>
-        </address>
-        <a href=""><img src="#" alt="логотип"></a>
+        <img src="#" alt="карта">
+        <p><span>NЁRDS DESIGN STUDIO</span></p>
+        <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <p><a href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
+        <button type="submit">Напишите нам</button>
+        <a href="index.html"><img src="#" alt="логотип"></a>
       </div>
       <div>
         <p><strong>Давайте дружить, это выгодно!</strong></p>

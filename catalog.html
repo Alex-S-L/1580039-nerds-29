@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>catalog</title>
 </head>
 <body>
@@ -16,16 +17,14 @@
         </ul>
       </nav>
       <div>
+        <a href="">
+          <img src="#" alt="корзина">
           <p>корзина</p>
-          <ul>
-            <li>
-              <p><a href=""></a></p>
-            </li>
-          </ul>
-        </div>
+        </a>
+      </div>
     </header>
 
-  <main>
+    <main>
     <h1 class="visually-hidden">Магазин готовых шаблонов</h1>
 
     <section>
@@ -51,7 +50,7 @@
             <label><input type="checkbox" name="gallery"></label>
             <label><input type="checkbox" name="basket"></label>
         </fieldset>
-        <input type="submit" name="submit" id="submit" value="показать">
+        <button type="submit">показать</button>
       </form>
     </section>
 
@@ -60,16 +59,18 @@
       <div>
         <p>сортировать</p>
         <ul>
-          <li><button>по цене</button></li>
-          <li><button>по типу</button></li>
-          <li><button>по названию</button></li>
+          <li><a href="">по цене</a></li>
+          <li><a href="">по типу</a></li>
+          <li><a href="">по названию</a></li>
+          <li><a href=""><img src="#" alt="вверх"></a></li>
+          <li><a href=""><img src="#" alt="вниз"></a></li>
         </ul>
       </div>
       <ul>
         <li>
           <a href="">
             <figure>
-              <img src="#" alt="sedona">
+              <img src="#" alt="седона">
               <div>
                 <h3>sedona</h3>
                 <p>Информационный сайт для туристов</p>
@@ -143,21 +144,19 @@
          <li>1</li>
          <li><a href="">2</a></li>
          <li><a href="">3</a></li>
+         <li><a href="">следующая</a></li>
        </ul>
-       <button>следующая</button>
     </section>
 
-  </main>
+    </main>
 
-  <footer>
+    <footer>
       <div class="map">
-        <iframe src="#"></iframe>
-        <address>
-          <p><b>NЁRDS DESIGN STUDIO</b></p>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p><a href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
-          <a href="">Напишите нам</a>
-        </address>
+        <img src="#" alt="карта">
+        <p><span>NЁRDS DESIGN STUDIO</span></p>
+        <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+        <p><a href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
+        <button type="submit">Напишите нам</button>
         <a href="index.html"><img src="#" alt="логотип"></a>
       </div>
       <div>
@@ -165,5 +164,5 @@
         <p>Скидка 10% для друзей из социальных сетей</p>
       </div>
     </footer>
-</body>
+  </body>
 </html>
