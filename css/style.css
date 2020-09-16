@@ -1,0 +1,278 @@
+:root {
+ --black: #000000;
+ --liter-black: #283136;
+ --white: #ffffff;
+
+ --basic-red: #fb565a;
+ --hover-red: #e74246;
+ --action-red: #d7373b;
+
+ --basic-green: #00ca74;
+ --hover-green: #00bc6c;
+ --action-green: #00aa62;
+ --dark-grey: #444444;
+
+ --basic-yellow: #efc849;
+ --hover-yellow: #eab534;
+ --action-yellow: #e5a722;
+
+ --lighter-grey: #eeeeee;
+ --contact-form-grey: #666666;
+ --reference-grey: #a7a7a7;
+
+
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto.woff2') format('woff2'),
+       url('../fonts/roboto.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/robotomedium.woff2') format('woff2'),
+       url('../fonts/robotomedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+       url('../fonts/robotobold.woff2') format('woff2'),
+       url('../fonts/robotobold.woff') format('woff');
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: left;
+  color: var(--liter-black, #283136);
+  text-transform: uppercase;
+  background-color: var(--white, #ffffff);
+  min-width: 1160px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.main-navigation{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+  background-color: transparent;
+
+}
+.cart {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.main-navigation-wraper {
+  background-color: var(--lighter-grey, #eeeeee);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.cart{
+  color: var(--black, #000000);
+}
+
+.site-navigation a:visited,
+.cart {
+  color: var(--black, #000000);
+}
+
+.site-navigation a:hover,
+.cart:hover {
+  color: var(--basic-red, #fb565a);
+}
+.site-navigation a:active,
+.cart:active {
+  color: var(--reference-grey, #a7a7a7);
+}
+
+/*не могу понять чего от меня хотят в 4-м пункте стайл гайда */
+
+.slider {
+  list-style: none;
+  font-weight: normal;
+  background-color: transparent;
+}
+.slider-item-header {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  text-transform: none;
+}
+
+/*услуги */
+
+
+.services-header {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.aboutus-header {
+font-weight: 500;
+font-size: 45px;
+line-height: 45px;
+}
+
+.aboutus-subheader {
+font-weight: bold;
+}
+
+.figure {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.percent {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.table-text {
+font-size: 16px;
+line-height: 18px;
+}
+
+/*Партнёры. Что то мне подсказывает, что надо это делать дивами, а не списками, но пожалуй пока оставлю так*/
+
+.partners-list {
+  list-style: none;
+}
+
+/*Тут будут контакты в футере*/
+.contacts-info{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--contact-form-grey, #666666);
+  background-color: var(--white, #ffffff);
+}
+.contacts-phone {
+  color: inherit;
+}
+.contacts-header {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.friendship-header {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+.discount {
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+columns: var(--dark-grey, #444444);
+}
+
+/*контактная форма*/
+.contactform {
+  background-color: var(--white, #ffffff);
+}
+
+.contactform-header {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--black, #000000);
+}
+
+.contactform-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--black, #000000);
+}
+
+
+/*Тут будут кнопки*/
+.button {
+  color: var(--white, #ffffff);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  background-color: red;
+  width: 160px;
+  height: 50px;
+  display: block;
+  border-radius: 3px;
+}
+/*кнопка для слайдера*/
+.slider-button{
+  width: 240px;
+  height: 50px;
+}
+
+.slider-button-action:hover {
+  background-color: var(--hover-red, #E74246);
+}
+
+.slider-button-action:active {
+  background-color: var(--action-red, #D7373B);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.service-red-button-action:hover {
+  background-color: var(--hover-red, #E74246);
+}
+.service-red-button-action:active {
+  background-color: var(--action-red, #D7373B);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.green-button {
+  background-color: var(--basic-green, #00ca74);
+}
+.service-green-button-action:hover {
+  background-color: var(--hover-green, #00bc6c);
+}
+.service-green-button-action:active {
+  background-color: var(--action-green, #00aa62);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.yellow-button {
+  background-color: var(--basic-yellow, #efc849);
+}
+.service-yellow-button-action:hover {
+  background-color: var(--hover-yellow, #eab534);
+}
+.service-yellow-button-action:active {
+  background-color: var(--action-yellow, #e5a722);
+  color: rgba(255, 255, 255, 0.3);
+}
