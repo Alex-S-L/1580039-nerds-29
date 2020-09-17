@@ -10,12 +10,12 @@
  --basic-green: #00ca74;
  --hover-green: #00bc6c;
  --action-green: #00aa62;
- --dark-grey: #444444;
 
  --basic-yellow: #efc849;
  --hover-yellow: #eab534;
  --action-yellow: #e5a722;
 
+--dark-grey: #444444;
  --lighter-grey: #eeeeee;
  --contact-form-grey: #666666;
  --reference-grey: #a7a7a7;
@@ -73,22 +73,20 @@ img{
   max-width: 100%;
   height: auto;
 }
+.main-header {
+  background-color: var(--lighter-grey, #eeeeee);
+}
 
-.main-navigation{
+.main-navigation {
   font-size: 16px;
   line-height: 30px;
   font-weight: normal;
   background-color: transparent;
-
 }
 .cart {
   font-size: 16px;
   line-height: 30px;
   font-weight: normal;
-}
-
-.main-navigation-wraper {
-  background-color: var(--lighter-grey, #eeeeee);
 }
 
 .site-navigation {
@@ -100,15 +98,11 @@ img{
   color: var(--black, #000000);
 }
 
-.site-navigation a:visited,
-.cart {
-  color: var(--black, #000000);
-}
-
 .site-navigation a:hover,
 .cart:hover {
   color: var(--basic-red, #fb565a);
 }
+
 .site-navigation a:active,
 .cart:active {
   color: var(--reference-grey, #a7a7a7);
@@ -121,6 +115,7 @@ img{
   font-weight: normal;
   background-color: transparent;
 }
+
 .slider-item-header {
   font-weight: 500;
   font-size: 55px;
@@ -226,10 +221,11 @@ columns: var(--dark-grey, #444444);
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  background-color: red;
+  background-color: var(--basic-red, #fb565a);
   width: 160px;
   height: 50px;
   display: block;
+  border: none;
   border-radius: 3px;
 }
 /*кнопка для слайдера*/
