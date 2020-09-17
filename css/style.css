@@ -1,5 +1,8 @@
 :root {
  --black: #000000;
+ --slightly-transparent-black: rgba(0, 0, 0, 0.3);
+ --transparent-black: rgba(0, 0, 0, 0.6);
+ --focus-black: rgba(0, 0, 0, 0.0001);
  --liter-black: #283136;
  --white: #ffffff;
 
@@ -15,12 +18,14 @@
  --hover-yellow: #eab534;
  --action-yellow: #e5a722;
 
---dark-grey: #444444;
+ --dark-grey: #444444;
  --lighter-grey: #eeeeee;
  --contact-form-grey: #666666;
  --reference-grey: #a7a7a7;
-
-
+ --filter-grey: #4d4d4d;
+ --pagination-grey: #dfdfdf;
+ --padding-liter-grey: #d5d5d5;
+ --pagination-grey: #dbdbdb;
 }
 @font-face {
   font-family: 'Roboto';
@@ -165,6 +170,106 @@ line-height: 18px;
   list-style: none;
 }
 
+
+
+
+/*Стили для внутренней страницы*/
+
+/*стили для форм, пока сюда не полезу, подожду соответствующую тему, а то долго разбираться самому*/
+.filter-header {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--black, #000000);
+}
+
+.filter input {
+  color: var(--filter-grey, #4d4d4d);
+  opacity: 0.4;
+}
+
+/*стили для каталога*/
+.catalog-sorting-header {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--black, #000000);
+}
+
+.catalog-sorting-navigation {
+  list-style: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog-sorting-navigation a {
+  color: var(--slightly-transparent-black, rgba(0, 0, 0, 0.3));
+}
+
+.catalog-sorting-navigation a:hover {
+  color: var(--transparent-black, rgba(0, 0, 0, 0.6));
+}
+
+.catalog-sorting-navigation a:active {
+  color: var(--black, #000000);
+}
+
+.catalog-products-list {
+  list-style: none;
+
+}
+
+.catalog-products-header a {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--black, #000000);
+}
+.catalog-products-header a:hover {
+  color: var(--basic-red, #fb565a);
+}
+.catalog-products-header a:active {
+  color: var(--transparent-black, rgba(0, 0, 0, 0.6));
+}
+
+.catalog-products-info {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--contact-form-grey, #666666);
+}
+
+.pagination-list {
+  list-style: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.pagination-item a {
+  color: var(--black, #000000);
+  background-color: var( --lighter-grey, #eeeeee);
+  border: none;
+  border-radius: 3px;
+}
+
+.pagination-list a:hover {
+ background-color: var(--pagination-grey, #dfdfdf);
+}
+
+.pagination-list a:active {
+  color: var(--slightly-transparent-black, rgba(0, 0, 0, 0.3));
+  background-color: var(--padding-liter-grey, #d5d5d5);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.pagination-list a:focus {
+  background: var(--focus-black, rgba(0, 0, 0, 0.0001));
+  border: 3px solid var(--pagination-grey, #dbdbdb); /*Блин, 100500 оттенков серого, пора книгу писатью. Даже не могу как то это систематизировать так с ходу.*/
+}
+
 /*Тут будут контакты в футере*/
 .contacts-info{
   font-weight: normal;
@@ -188,10 +293,10 @@ line-height: 18px;
   line-height: 36px;
 }
 .discount {
-font-weight: normal;
-font-size: 16px;
-line-height: 22px;
-columns: var(--dark-grey, #444444);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  columns: var(--dark-grey, #444444);
 }
 
 /*контактная форма*/
@@ -213,6 +318,11 @@ columns: var(--dark-grey, #444444);
   color: var(--black, #000000);
 }
 
+.socialnetworks-list {
+  list-style: none;
+}
+
+
 
 /*Тут будут кнопки*/
 .button {
@@ -226,49 +336,61 @@ columns: var(--dark-grey, #444444);
   height: 50px;
   display: block;
   border: none;
+  outline: none;
   border-radius: 3px;
 }
-/*кнопка для слайдера*/
+
 .slider-button{
   width: 240px;
   height: 50px;
+  border: none;
 }
 
 .slider-button-action:hover {
   background-color: var(--hover-red, #E74246);
+  border: none;
 }
 
 .slider-button-action:active {
   background-color: var(--action-red, #D7373B);
   color: rgba(255, 255, 255, 0.3);
+  border: none;
 }
 
 .service-red-button-action:hover {
   background-color: var(--hover-red, #E74246);
+  border: none;
 }
 .service-red-button-action:active {
   background-color: var(--action-red, #D7373B);
   color: rgba(255, 255, 255, 0.3);
+  border: none;
 }
 
 .green-button {
   background-color: var(--basic-green, #00ca74);
+  border: none;
 }
 .service-green-button-action:hover {
   background-color: var(--hover-green, #00bc6c);
+  border: none;
 }
 .service-green-button-action:active {
   background-color: var(--action-green, #00aa62);
   color: rgba(255, 255, 255, 0.3);
+  border: none;
 }
 
 .yellow-button {
   background-color: var(--basic-yellow, #efc849);
+  border: none;
 }
 .service-yellow-button-action:hover {
   background-color: var(--hover-yellow, #eab534);
+  border: none;
 }
 .service-yellow-button-action:active {
   background-color: var(--action-yellow, #e5a722);
   color: rgba(255, 255, 255, 0.3);
+  border: none;
 }
