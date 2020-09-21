@@ -4,6 +4,7 @@
  --transparent-black: rgba(0, 0, 0, 0.6);
  --focus-black: rgba(0, 0, 0, 0.0001);
  --liter-black: #283136;
+ --sorting-arrow-black: #231f20;
  --white: #ffffff;
 
  --basic-red: #fb565a;
@@ -22,10 +23,12 @@
  --lighter-grey: #eeeeee;
  --contact-form-grey: #666666;
  --reference-grey: #a7a7a7;
+ --sorting-arrow-grey: #a6a6a6;
  --filter-grey: #4d4d4d;
  --pagination-grey: #dfdfdf;
  --padding-liter-grey: #d5d5d5;
  --pagination-grey: #dbdbdb;
+ --socials-grye: #e1e1e1;
 }
 @font-face {
   font-family: 'Roboto';
@@ -68,6 +71,7 @@ body {
   text-transform: uppercase;
   background-color: var(--white, #ffffff);
   min-width: 1160px;
+
 }
 
 a {
@@ -88,18 +92,13 @@ img{
   font-weight: normal;
   background-color: transparent;
 }
-.cart {
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: normal;
-}
 
 .site-navigation {
   list-style: none;
 }
 
 .site-navigation a,
-.cart{
+.cart-icon {
   color: var(--black, #000000);
 }
 
@@ -108,12 +107,31 @@ img{
   color: var(--basic-red, #fb565a);
 }
 
+.cart {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+  position: relative;
+  margin-left: 30px;
+}
+
+.cart-icon::before {
+ content: "";
+ width: 15px;
+ height: 15px;
+ position: absolute;
+ left: -20px;
+ top: 6px;
+ background-image: url("../img/cart-icon.svg");
+}
+/*Мне наверно час понадобился чтоб понять почему у меня background-image не работает, во я мозг=(. Позиционировать потом буду.*/
+
+
 .site-navigation a:active,
 .cart:active {
   color: var(--reference-grey, #a7a7a7);
 }
 
-/*не могу понять чего от меня хотят в 4-м пункте стайл гайда */
 
 .slider {
   list-style: none;
@@ -130,7 +148,9 @@ img{
 
 /*услуги */
 
-
+.services-list{
+  list-style: none;
+}
 .services-header {
   font-weight: bold;
   font-size: 24px;
@@ -138,13 +158,18 @@ img{
 }
 
 .aboutus-header {
-font-weight: 500;
-font-size: 45px;
-line-height: 45px;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
 }
 
 .aboutus-subheader {
-font-weight: bold;
+  font-weight: bold;
+}
+.about-us {
+  width: 360px;
+  height: 206px;
+  background-image: url(../img/index/nerds-selebration.png);
 }
 
 .figure {
@@ -163,8 +188,6 @@ font-weight: bold;
 font-size: 16px;
 line-height: 18px;
 }
-
-/*Партнёры. Что то мне подсказывает, что надо это делать дивами, а не списками, но пожалуй пока оставлю так*/
 
 .partners-list {
   list-style: none;
@@ -214,6 +237,24 @@ line-height: 18px;
 .catalog-sorting-navigation a:active {
   color: var(--black, #000000);
 }
+.sorting-arrow-up,.sorting-arrow-down {
+  fill: var(--sorting-arrow-grey, #a6a6a6);
+  fill-opacity: 0.2;
+}
+.sorting-arrow-up:hover {
+  fill-opacity: 1;
+}
+.sorting-arrow-down:hover {
+  fill-opacity: 1;
+}
+.sorting-arrow-up:active {
+  fill: var(--sorting-arrow-black, #231f20);
+}
+.sorting-arrow-down:active {
+  fill: var(--sorting-arrow-black, #231f20);
+}
+
+/*Снова не отпускает чувство что я дико перемудрил*/
 
 .catalog-products-list {
   list-style: none;
@@ -322,6 +363,60 @@ line-height: 18px;
   list-style: none;
 }
 
+
+.vk {
+  background-image: url(../img/index/icons/VK.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 22px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fb {
+  background-image: url(../img/index/icons/Facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 22px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.instagram {
+  background-image: url(../img/index/icons/Instagram.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 22px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.socialnetworks-container {
+  display: block;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: var(--socials-grye, #e1e1e1);
+  display: table;
+}
+
+.socialnetworks-container:hover {
+  background-color: var(--hover-red, #e74246);
+}
+
+.socialnetworks-container:active {
+  background-color: var(--action-red, #d7373b);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.socialnetworks-container:active .fb{
+  opacity: 0.3;
+}
+/*Что то у меня после этого дизайна головка бобо. Подозреваю что не самое лучшее решение, но как смог. Наверно внутрь надо ещё пихнуть скрытое название соц сети?*/
 
 
 /*Тут будут кнопки*/

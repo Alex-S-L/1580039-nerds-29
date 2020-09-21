@@ -8,12 +8,12 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
 
-  <body>
+  <body class="page-body">
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="">
-          <img src="#" alt="логотип">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/nerds-logo.svg" alt="логотип" width="160" height="65">
         </a>
           <div class="main-navigation-wraper">
             <div class="box">
@@ -26,10 +26,9 @@
           </div>
         </div>
       </nav>
-      <div>
-        <a class="cart" href="">
-          <img src="#" alt="корзина">
-          <p>корзина</p>
+      <div class="cart">
+        <a href="">
+          <p class="cart-icon">корзина</p>
         </a>
       </div>
         <ul class="slider">
@@ -40,7 +39,7 @@
               <a class="button slider-button slider-button-action" href="">узнать больше</a>
             </div>
             <div class="slider-coll-two">
-              <img class="slider-pic" src="#" alt="айфоны">
+              <img class="slider-pic" src="img/index/slider-slide1.png" alt="Дизайн для мобильного приложения" width="760" height="431">
             </div>
           </li>
           <li class="slider-item">
@@ -50,9 +49,8 @@
               <a class="button slider-button slider-button-action" href="">узнать больше</a>
             </div>
             <div class="slider-coll-two">
-              <img class="slider-pic" src="#" alt="мониторы">
+              <img class="slider-pic" src="img/index/slider-slide2.png" alt="Математически идеальные пропорции" width="760" height="431">
             </div>
-            <!-- И года не прошло как я понял как просматривать скрытые элементы в фигме-->
           </li>
           <li class="slider-item">
             <div class="slider-coll-one">
@@ -61,8 +59,15 @@
               <a class="button slider-button slider-button-action" href="">узнать больше</a>
             </div>
             <div class="slider-coll-two">
-              <img class="slider-pic" src="#" alt="айфониайпад">
+              <img class="slider-pic" src="img/index/slider-slide3.png" alt="" width="760" height="431">
             </div>
+            <svg width="88" height="18">
+              <circle fill="white" r="9" cx="9" cy="50%"/>
+              <circle fill="white" r="2" cx="9" cy="50%" stroke="#c1c1c1" stroke-width="2"/>
+              <circle fill="white" r="9" cx="50%" cy="50%"/>
+              <circle fill="white" r="9" cx="79" cy="50%"/>
+            </svg>
+            <!-- Или то что я атрибутами тут описал надо в css стилями сделать? -->
           </li>
         </ul>
     </header>
@@ -75,7 +80,7 @@
         <ul class="services-list">
             <li class="services-item">
               <div class="services-coll">
-                <img class="sevices-pic" src="#" alt="сайты">
+                <img class="sevices-pic" src="img/index/services-illustration-1.png" alt="сайты" width="300" height="146">
                 <h3 class="services-header">веб-сайты</h3>
                 <p>Мир никогда не будет прежним после того как увидит ваш сайт</p>
                 <a class="button service-red-button-action" href="">Заказать</a>
@@ -83,7 +88,7 @@
             </li>
             <li class="services-item">
               <div class="services-coll">
-                <img class="sevices-pic" src="#" alt="приложения">
+                <img class="sevices-pic" src="img/index/services-illustration-2.png" alt="приложения" width="300" height="146">
                 <h3 class="services-header">приложения</h3>
                 <p>Покорите топ-10 приложений в AppStore и Google Play</p>
                 <a class="button green-button service-green-button-action" href="">Заказать</a>
@@ -91,7 +96,7 @@
             </li>
             <li class="services-item">
               <div class="services-coll">
-                <img class="sevices-pic" src="#" alt="презентации">
+                <img class="sevices-pic" src="img/index/services-illustration-3.png" alt="презентации" width="300" height="146">
                 <h3 class="services-header">презентации</h3>
                 <p>Вы даже не подозреваете, насколько вы изумительны!</p>
                 <a class="button yellow-button service-yellow-button-action" href="">Заказать</a>
@@ -113,7 +118,9 @@
           </ul>
         </div>
         <div class="aboutus-coll-two">
-          <img class="aboutus-pic" src="#" alt="">
+          <div class="about-us"></div>
+          <!-- <img class="aboutus-pic" src="img/index/nerds-selebration.png" alt="" width="360" height="206"> -->
+          <!-- не уверен, вроде изображение с данными таблицы не связано. -->
           <table class="aboutus-data">
             <caption class="aboutus-subheader">с 2004 года любим точность во всем:</caption>
             <tr>
@@ -136,10 +143,10 @@
       <section class="partners">
         <h2 class="visually-hidden">Наши партнёры</h2>
         <ul class="partners-list">
-          <li class="parnters-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="htmlacademy"></a></li>
-          <li class="parnters-item"><a><img src="#" alt="borodinski"></a></li>
-          <li class="parnters-item"><a><img src="#" alt="pink"></a></li>
-          <li class="parnters-item"><a><img src="#" alt="mishka"></a></li>
+          <li class="parnters-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/index/parters/HTMLacademy.png" alt="htmlacademy" width="199" height="68"></a></li>
+          <li class="parnters-item"><a><img src="img/index/parters/borodinski.png" alt="borodinski" width="209" height="90"></a></li>
+          <li class="parnters-item"><a><img src="img/index/parters/pink.png" alt="pink" width="185" height="52"></a></li>
+          <li class="parnters-item"><a><img src="img/index/parters/mishka.png" alt="mishka" width="173" height="84"></a></li>
         </ul>
       </section>
     </main>
@@ -148,7 +155,7 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="map-pic" src="#" alt="карта">
+        <img class="map-pic" src="img/map.jpg" alt="карта" width="1440" height="416">
         <div class="contacts-info">
           <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
           <address class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -160,20 +167,20 @@
 
       <section class="social-links">
         <h2 class="visually-hiden">Ссылки на социальные сети</h2>
-        <ul>
+        <ul class="socialnetworks-list">
           <li class="socialnetworks-button">
-            <a href="">
-              <img src="#" alt="VK">
+            <a class="socialnetworks-container" href="">
+              <div class="vk"></div>
             </a>
           </li>
           <li class="socialnetworks-button">
-            <a href="">
-              <img src="#" alt="FB">
+            <a class="socialnetworks-container" href="">
+              <div class="fb"></div>
             </a>
           </li>
           <li class="socialnetworks-button">
-            <a href="">
-              <img src="#" alt="INSTAGRAM">
+            <a class="socialnetworks-container" href="">
+              <div class="instagram"></div>
             </a>
           </li>
         </ul>
