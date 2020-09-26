@@ -66,11 +66,10 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
-  text-align: left;
   color: var(--liter-black, #283136);
   text-transform: uppercase;
   background-color: var(--white, #ffffff);
-  min-width: 1160px;
+  min-width: 1157px;
 
 }
 
@@ -82,10 +81,31 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  align-content: start;
+  grid-template-rows: min-content 1fr min-content;
+}
+
 .main-header {
   background-color: var(--lighter-grey, #eeeeee);
 }
 
+.container {
+  max-width: 1157px;
+  margin: 0 auto;
+}
+
+.main-header-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
@@ -103,7 +123,7 @@ img{
 }
 
 .site-navigation a:hover,
-.cart:hover {
+.cart-icon:hover {
   color: var(--basic-red, #fb565a);
 }
 
@@ -120,20 +140,21 @@ img{
  width: 15px;
  height: 15px;
  position: absolute;
- left: -20px;
- top: 6px;
+ left: -30px;
+ top: 22px;
  background-image: url("../img/cart-icon.svg");
 }
 /*Мне наверно час понадобился чтоб понять почему у меня background-image не работает, во я мозг=(. Позиционировать потом буду.*/
 
 
 .site-navigation a:active,
-.cart:active {
+.cart-icon:active {
   color: var(--reference-grey, #a7a7a7);
 }
 
 
 .slider {
+  justify-self: center;
   list-style: none;
   font-weight: normal;
   background-color: transparent;
@@ -146,15 +167,64 @@ img{
   text-transform: none;
 }
 
+.slider-image-one {
+  background-image: url(../img/index/slider-slide1.png);
+  width: 760px;
+  height: 431px;
+}
+
+.slider-image-two {
+  background-image: url(../img/index/slider-slide2.png);
+  width: 760px;
+  height: 431px;
+}
+
+.slider-image-three {
+  background-image: url(../img/index/slider-slide3.png);
+  width: 760px;
+  height: 431px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 /*услуги */
 
 .services-list{
   list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
 }
 .services-header {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+}
+
+.services-info {
+  text-transform: none;
+  padding-right: 60px;
+}
+
+.aboutus {
+  text-transform: none;
+  padding-top: 39px;
+  border-top: 2px solid var(--lighter-grey, #eeeeee);
+
+}
+
+.aboutus-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 40px;
 }
 
 .aboutus-header {
@@ -165,7 +235,13 @@ img{
 
 .aboutus-subheader {
   font-weight: bold;
+  text-transform: uppercase;
 }
+
+.aboutus-list {
+  list-style-image: url("../img/index/icons/list-icon.svg");
+}
+
 .about-us {
   width: 360px;
   height: 206px;
@@ -185,13 +261,34 @@ img{
 }
 
 .table-text {
-font-size: 16px;
-line-height: 18px;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .partners-list {
   list-style: none;
+  padding-top: 46px;
+  padding-bottom: 44px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+  border-top: 2px solid var(--lighter-grey, #eeeeee);
+  border-bottom: 2px solid var(--lighter-grey, #eeeeee);
 }
+
+.partners-item {
+  opacity: 0.2;
+}
+
+.partners-item:hover {
+  opacity: 1;
+}
+
+.partners-item:active {
+  opacity: 0.1;
+}
+
 
 
 
@@ -312,20 +409,45 @@ line-height: 18px;
 }
 
 /*Тут будут контакты в футере*/
-.contacts-info{
+.map-pic-container {
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.map-pic {
+  position: relative;
+}
+
+
+.contacts-info {
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   color: var(--contact-form-grey, #666666);
   background-color: var(--white, #ffffff);
+  position: absolute;
+  padding: 49px 50px 47px 50px;
+  top: 0px;
 }
-.contacts-phone {
-  color: inherit;
+
+.map-marker {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
+
 .contacts-header {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
+}
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: inherit;
 }
 
 .friendship-header {
@@ -340,29 +462,21 @@ line-height: 18px;
   columns: var(--dark-grey, #444444);
 }
 
-/*контактная форма*/
-.contactform {
-  background-color: var(--white, #ffffff);
-}
-
-.contactform-header {
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 53px;
-  color: var(--black, #000000);
-}
-
-.contactform-title {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--black, #000000);
+.socialnetworks-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 40px;
 }
 
 .socialnetworks-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
+.socialnetworks-list li {
+  display: inline-block;
+}
 
 .vk {
   background-image: url(../img/index/icons/VK.svg);
@@ -416,7 +530,25 @@ line-height: 18px;
 .socialnetworks-container:active .fb{
   opacity: 0.3;
 }
-/*Что то у меня после этого дизайна головка бобо. Подозреваю что не самое лучшее решение, но как смог. Наверно внутрь надо ещё пихнуть скрытое название соц сети?*/
+
+/*контактная форма*/
+.contactform {
+  background-color: var(--white, #ffffff);
+}
+
+.contactform-header {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 53px;
+  color: var(--black, #000000);
+}
+
+.contactform-title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--black, #000000);
+}
 
 
 /*Тут будут кнопки*/
@@ -427,17 +559,13 @@ line-height: 18px;
   line-height: 18px;
   text-align: center;
   background-color: var(--basic-red, #fb565a);
-  width: 160px;
-  height: 50px;
-  display: block;
   border: none;
   outline: none;
   border-radius: 3px;
+  padding: 15px 40px;
 }
 
 .slider-button{
-  width: 240px;
-  height: 50px;
   border: none;
 }
 
