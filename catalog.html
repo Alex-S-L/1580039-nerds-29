@@ -11,34 +11,32 @@
   <body class="page-body inner-page">
 
     <header class="main-header">
-     <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-          <img src="img/nerds-logo.svg" alt="логотип" width="160" height="65">
-        </a>
-          <div class="main-navigation-wraper">
-            <div class="box">
-            <ul class="site-navigation">
-              <li class="main-navigation-item"><a href="">студия</a></li>
-              <li class="main-navigation-item"><a href="">клиенты</a></li>
-              <li class="main-navigation-item"><a href="catalog.html">магазин</a></li>
-              <li class="main-navigation-item"><a href="">контакты</a></li>
-            </ul>
-          </div>
+     <div class="main-header-wrapper container">
+        <nav class="main-navigation">
+          <a class="main-header-logo" href="index.html">
+            <img src="img/nerds-logo.svg" alt="логотип" width="160" height="65">
+          </a>
+          <ul class="site-navigation">
+            <li class="main-navigation-item"><a href="">студия</a></li>
+            <li class="main-navigation-item"><a href="">клиенты</a></li>
+            <li class="main-navigation-item"><a href="catalog.html">магазин</a></li>
+            <li class="main-navigation-item"><a href="">контакты</a></li>
+          </ul>
+        </nav>
+        <div class="cart">
+          <a href="">
+            <p class="cart-icon">корзина</p>
+          </a>
         </div>
-      </nav>
-      <div class="cart">
-        <a href="">
-          <p class="cart-icon">корзина</p>
-        </a>
       </div>
     </header>
 
-      <main>
-        <h1 class="visually-hidden">Магазин готовых шаблонов</h1>
+      <main class="catalog-page container">
+        <h1 class="catalog-page-header">Магазин готовых шаблонов</h1>
 
-        <section>
+        <section class="filter">
           <h2 class="visually-hidden">Фильтр шаблонов</h2>
-          <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset>
               <legend class="filter-header">стоимость</legend>
                 <input type="range" min="0" max="15000" value="9000" name="pricerange" id="pricerange">
@@ -46,13 +44,13 @@
                 <label>до<input type="number" name="maxprice" id="maxprice"></label>
             </fieldset>
             <fieldset>
-              <legend class="form-header">сетка</legend>
+              <legend class="filter-header">сетка</legend>
                 <label><input type="radio" name="grid" checked>Адаптивная</label>
                 <label><input type="radio" name="grid">Фиксированная</label>
                 <label><input type="radio" name="grid">Резиновая</label>
             </fieldset>
             <fieldset>
-              <legend class="form-header">особенности</legend>
+              <legend class="filter-header">особенности</legend>
                 <label><input type="checkbox" name="slider" checked>Слайдер</label>
                 <label><input type="checkbox" name="advantage">Блок преимуществ</label>
                 <label><input type="checkbox" name="news" checked>Новости</label>
@@ -63,7 +61,7 @@
           </form>
         </section>
 
-        <section>
+        <section class="catalog-sorting">
           <h2 class="visually-hidden">Каталог</h2>
           <div>
             <p class="catalog-sorting-header">сортировать</p>
@@ -87,17 +85,31 @@
               </li>
             </ul>
           </div>
+        </section>
+        <!-- решил развить сортировку и каталог на 2 разные секции -->
+        <section class="catalog-products">
+          <h2 class="visually-hidden"> Список продукции</h2>
           <ul class="catalog-products-list">
             <li class="catalog-products-item">
               <figure>
-                <img src="img/catalog/sedona.jpg" alt="седона" width="358" height="580">
-                <div>
-                  <h3 class="catalog-products-header"><a href="">sedona</a></h3>
-                  <p class="catalog-products-info">Информационный сайт для туристов</p>
-                  <button class="button slider-button-action">9900 &#8381;</button>
+                <div class="catalog-products-frame">
+                  <svg class="catalog-products-cap" width="360" height="33" fill="transparent" >
+                    <rect width="360" height="33" rx="5"  fill="#4d4d4d"/>
+                    <circle r="7" cx="16" cy="13" fill="white"/>
+                    <circle r="7" cx="39" cy="13" fill="white"/>
+                    <circle r="7" cx="62" cy="13" fill="white"/>
+                  </svg>
+                  <img class="catalog-products-pic" src="img/catalog/sedona.jpg" alt="седона" width="358" height="580">
+                  <div class="catalog-products-popup">
+                    <h3 class="catalog-products-header"><a href="">sedona</a></h3>
+                    <p class="catalog-products-info">Информационный сайт для туристов</p>
+                    <button class="button slider-button-action">9900 &#8381;</button>
+                  </div>
                 </div>
               </figure>
             </li>
+
+            <!-- Немного пофантазировал насчёт того, как может выглядеть карточка товара. Предложения и замечания приветствуются =) -->
             <li class="catalog-products-item">
               <figure>
                 <img src="img/catalog/pink-app.jpg" alt="pink" width="358" height="580">
@@ -163,39 +175,42 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <img class="map-pic" src="img/map.jpg" alt="карта" width="1440" height="416">
-        <div class="contacts-info">
-          <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
-          <address class="contacts-address">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-          <p><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
-          <button class="button contactdata-button" type="submit">Напишите нам</button>
+        <div class="map-pic-container">
+          <img class="map-pic" src="img/map.jpg" alt="карта" width="1440" height="416">
+          <div class="contacts-info">
+            <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
+            <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
+            <p><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
+            <button class="button contactdata-button" type="submit">Напишите нам</button>
+          </div>
+          <a class="map-marker" href="index.html"><img src="img/map-marker.png" alt="логотип"></a>
         </div>
-        <a href="index.html"><img src="#" alt="логотип"></a>
       </section>
 
-      <section class="social-links">
-        <h2 class="visually-hiden">Ссылки на социальные сети</h2>
-        <ul class="socialnetworks-list">
-          <li class="socialnetworks-button">
-            <a class="socialnetworks-container" href="">
-              <div class="vk"></div>
-            </a>
-          </li>
-          <li class="socialnetworks-button">
-            <a class="socialnetworks-container" href="">
-              <div class="fb"></div>
-            </a>
-          </li>
-          <li class="socialnetworks-button">
-            <a class="socialnetworks-container" href="">
-              <div class="instagram"></div>
-            </a>
-          </li>
-        </ul>
-
-        <div class="friendship">
-          <p class="friendship-header"><strong>Давайте дружить, это выгодно!</strong></p>
-          <p class="discount">Скидка 10% для друзей из социальных сетей</p>
+      <section class="social-links container">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+        <div class="socialnetworks-wrapper">
+          <ul class="socialnetworks-list">
+            <li class="socialnetworks-button">
+              <a class="socialnetworks-container" href="">
+                <div class="vk"><span class="visually-hidden">VK</span></div>
+              </a>
+            </li>
+            <li class="socialnetworks-button">
+              <a class="socialnetworks-container" href="">
+                <div class="fb"><span class="visually-hidden">FB</span></div>
+              </a>
+            </li>
+            <li class="socialnetworks-button">
+              <a class="socialnetworks-container" href="">
+                <div class="instagram"><span class="visually-hidden">Instagram</span></div>
+              </a>
+            </li>
+          </ul>
+          <div class="friendship">
+            <p class="friendship-header"><strong>Давайте дружить, это выгодно!</strong></p>
+            <p class="discount">Скидка 10% для друзей из социальных сетей</p>
+          </div>
         </div>
       </section>
 

@@ -295,7 +295,27 @@ img{
 
 /*Стили для внутренней страницы*/
 
-/*стили для форм, пока сюда не полезу, подожду соответствующую тему, а то долго разбираться самому*/
+.catalog-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: min-content min-content 1fr;
+  grid-gap: 40px;
+}
+
+.catalog-page-header {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  text-transform: none;
+  text-align: center;
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+
+.filter {
+  grid-column: 1/2;
+}
+
 .filter-header {
   font-weight: bold;
   font-size: 18px;
@@ -308,7 +328,11 @@ img{
   opacity: 0.4;
 }
 
-/*стили для каталога*/
+.catalog-sorting {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+}
+
 .catalog-sorting-header {
   font-weight: bold;
   font-size: 18px;
@@ -351,11 +375,46 @@ img{
   fill: var(--sorting-arrow-black, #231f20);
 }
 
-/*Снова не отпускает чувство что я дико перемудрил*/
+.catalog-products {
+  grid-column: 2/-1
+}
 
 .catalog-products-list {
   list-style: none;
+}
 
+.catalog-products-frame {
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  width: 360px;
+  height: 608px;
+}
+
+.catalog-products-cap {
+  opacity: 0;
+}
+.catalog-products-frame:hover .catalog-products-popup {
+ opacity: 1;
+}
+
+.catalog-products-frame:hover .catalog-products-cap {
+ opacity: 1;
+}
+
+.catalog-products-pic {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 1px;
+}
+
+.catalog-products-popup {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--white, #ffffff);
 }
 
 .catalog-products-header a {
