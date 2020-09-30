@@ -69,7 +69,7 @@ body {
   color: var(--liter-black, #283136);
   text-transform: uppercase;
   background-color: var(--white, #ffffff);
-  min-width: 1157px;
+  min-width: 1160px;
 
 }
 
@@ -98,7 +98,7 @@ img{
 }
 
 .container {
-  max-width: 1157px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
@@ -154,6 +154,7 @@ img{
 
 
 .slider {
+  grid-column: 1/-1;
   justify-self: center;
   list-style: none;
   font-weight: normal;
@@ -314,6 +315,7 @@ img{
 
 .filter {
   grid-column: 1/2;
+  grid-row: 2/-1;
 }
 
 .filter-header {
@@ -376,11 +378,16 @@ img{
 }
 
 .catalog-products {
-  grid-column: 2/-1
+  grid-column: 2/-1;
 }
 
 .catalog-products-list {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
 }
 
 .catalog-products-frame {
@@ -392,7 +399,8 @@ img{
 }
 
 .catalog-products-cap {
-  opacity: 0;
+  opacity: 0
+  ;
 }
 .catalog-products-frame:hover .catalog-products-popup {
  opacity: 1;
@@ -405,7 +413,7 @@ img{
 .catalog-products-pic {
   display: inline-block;
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: 1px;
 }
 
@@ -414,6 +422,7 @@ img{
   position: absolute;
   bottom: 0px;
   left: 0px;
+  padding: 0 45px;
   background-color: var(--white, #ffffff);
 }
 
@@ -622,6 +631,9 @@ img{
   outline: none;
   border-radius: 3px;
   padding: 15px 40px;
+}
+.catalog-products-button {
+  padding: 17px 72px 15px 72px;
 }
 
 .slider-button{

@@ -61,7 +61,7 @@
           </form>
         </section>
 
-        <section class="catalog-sorting">
+        <div class="catalog-sorting">
           <h2 class="visually-hidden">Каталог</h2>
           <div>
             <p class="catalog-sorting-header">сортировать</p>
@@ -85,80 +85,82 @@
               </li>
             </ul>
           </div>
-        </section>
-        <!-- решил развить сортировку и каталог на 2 разные секции -->
+        </div>
+
         <section class="catalog-products">
           <h2 class="visually-hidden"> Список продукции</h2>
           <ul class="catalog-products-list">
             <li class="catalog-products-item">
-              <figure>
+              <article>
                 <div class="catalog-products-frame">
-                  <svg class="catalog-products-cap" width="360" height="33" fill="transparent" >
-                    <rect width="360" height="33" rx="5"  fill="#4d4d4d"/>
-                    <circle r="7" cx="16" cy="13" fill="white"/>
-                    <circle r="7" cx="39" cy="13" fill="white"/>
-                    <circle r="7" cx="62" cy="13" fill="white"/>
+                  <svg class="catalog-products-cap" width="360" height="40" fill="transparent" >
+                    <rect width="360" height="40" rx="5"  fill="#4d4d4d"/>
+                    <circle r="7" cx="16" cy="20" fill="white"/>
+                    <circle r="7" cx="39" cy="20" fill="white"/>
+                    <circle r="7" cx="62" cy="20" fill="white"/>
+                    <rect width="360" height="5" y="35" fill="#4d4d4d"/>
                   </svg>
                   <img class="catalog-products-pic" src="img/catalog/sedona.jpg" alt="седона" width="358" height="580">
                   <div class="catalog-products-popup">
                     <h3 class="catalog-products-header"><a href="">sedona</a></h3>
                     <p class="catalog-products-info">Информационный сайт для туристов</p>
-                    <button class="button slider-button-action">9900 &#8381;</button>
+                    <button class="button catalog-products-button slider-button-action">9900 &#8381;</button>
+                    <!-- *Касательно того разговора в телеге*Всё же стайлгайд говорит нам что у этого элемента есть эффекты при нажатии и наведении, так что врядли это просто текст.
+                    Или я не прав? -->
                   </div>
                 </div>
-              </figure>
+              </article>
+              <!--  Если такое оформление карточки товара норм, то я позже экстраполирую на все остальные -->
             </li>
-
-            <!-- Немного пофантазировал насчёт того, как может выглядеть карточка товара. Предложения и замечания приветствуются =) -->
             <li class="catalog-products-item">
-              <figure>
+              <article>
                 <img src="img/catalog/pink-app.jpg" alt="pink" width="358" height="580">
                 <div>
                   <h3 class="catalog-products-header"><a href="">pink app</a></h3>
                   <p class="catalog-products-info">Продуктовый лэндинг приложения для iOS и Android</p>
                   <button class="button slider-button-action">9900 &#8381;</button>
                 </div>
-              </figure>
+              </article>
             </li>
             <li class="catalog-products-item">
-              <figure>
+              <article>
                 <img src="img/catalog/borodinski.jpg" alt="borodinski" width="358" height="580">
                 <div>
                   <h3 class="catalog-products-header"><a href="">barbershop</a></h3>
                   <p class="catalog-products-info">Сайт салона красоты. Для мужчин, да.</p>
                   <button class="button slider-button-action">9900 &#8381;</button>
                 </div>
-              </figure>
+              </article>
             </li>
             <li class="catalog-products-item">
-              <figure>
+              <article>
                 <img src="img/catalog/mishka.jpg" alt="mishka" width="358" height="580">
                 <div>
                   <h3 class="catalog-products-header"><a href="">mishka</a></h3>
                   <p class="catalog-products-info">Интернет-магазин вязянных игрушек</p>
                   <button class="button slider-button-action">9900 &#8381;</button>
                 </div>
-              </figure>
+              </article>
             </li>
             <li class="catalog-products-item">
-              <figure>
+              <article>
                 <img src="img/catalog/A-plus.jpg" alt="a+" width="358" height="580">
                 <div>
                   <h3 class="catalog-products-header"><a href="">a plus</a></h3>
                   <p class="catalog-products-info">Лендинг курсов повышения квалификации</p>
                   <button class="button slider-button-action">9900 &#8381;</button>
                 </div>
-              </figure>
+              </article>
             </li>
             <li class="catalog-products-item">
-              <figure>
+              <article>
                 <img src="img/catalog/kbact.jpg" alt="Кваст" width="358" height="580">
                 <div>
                   <h3 class="catalog-products-header"><a href="">Кваст</a></h3>
                   <p class="catalog-products-info">Промо-сайт производителя крафтового кваса</p>
                   <button class="button slider-button-action">9900 &#8381;</button>
                 </div>
-              </figure>
+              </article>
             </li>
           </ul>
           <ul class="pagination-list">
@@ -177,6 +179,7 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="map-pic-container">
           <img class="map-pic" src="img/map.jpg" alt="карта" width="1440" height="416">
+          <!-- А картой займусь когда будет соответствующая тема чтоб она своим богопротивным растягиванием на оскверняла наши взоры -->
           <div class="contacts-info">
             <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
             <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
