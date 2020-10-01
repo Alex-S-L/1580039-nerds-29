@@ -69,7 +69,7 @@ body {
   color: var(--liter-black, #283136);
   text-transform: uppercase;
   background-color: var(--white, #ffffff);
-  min-width: 1160px;
+  min-width: 1157px;
 
 }
 
@@ -98,41 +98,77 @@ img{
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1157px;
   margin: 0 auto;
 }
 
 .main-header-wrapper {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 1fr;
 }
+
+.navigation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 49px;
+}
+
 .main-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
   font-size: 16px;
   line-height: 30px;
   font-weight: normal;
   background-color: transparent;
 }
 
-.site-navigation {
-  list-style: none;
+.main-header-logo-pic{
+  width: 160px;
+  height: 65px;
 }
 
-.site-navigation a,
+.main-site-navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 437px;
+  padding: 0px;
+
+}
+
+.main-navigation-item a {
+  padding-bottom: 13px;
+}
+
+.main-navigation-item a:focus {
+  border-bottom: 2px solid var(--basic-red, #fb565a);
+}
+.cart-refference:focus {
+  border-bottom: 2px solid var(--basic-red, #fb565a);
+}
+
+.main-site-navigation a,
 .cart-icon {
   color: var(--black, #000000);
 }
 
-.site-navigation a:hover,
+.main-site-navigation a:hover,
 .cart-icon:hover {
   color: var(--basic-red, #fb565a);
 }
 
-.cart {
+.main-user-navigarion {
   font-size: 16px;
   line-height: 30px;
   font-weight: normal;
   position: relative;
-  margin-left: 30px;
+}
+.cart-refference {
+  padding-left: 30px;
+  padding-bottom: 13px;
 }
 
 .cart-icon::before {
@@ -140,25 +176,34 @@ img{
  width: 15px;
  height: 15px;
  position: absolute;
- left: -30px;
- top: 22px;
+ left: 0px;
+ top: 6px;
  background-image: url("../img/cart-icon.svg");
 }
-/*Мне наверно час понадобился чтоб понять почему у меня background-image не работает, во я мозг=(. Позиционировать потом буду.*/
 
-
-.site-navigation a:active,
+.main-site-navigation a:active,
 .cart-icon:active {
   color: var(--reference-grey, #a7a7a7);
 }
-
 
 .slider {
   grid-column: 1/-1;
   justify-self: center;
   list-style: none;
   font-weight: normal;
+  padding: 0px;
+  margin: 0px;
   background-color: transparent;
+  width: 100%;
+}
+
+.slider-item {
+  width: 100%;
+}
+
+.slider-info {
+  width: 538px;
+  padding-top: 78px;
 }
 
 .slider-item-header {
@@ -166,24 +211,41 @@ img{
   font-size: 55px;
   line-height: 55px;
   text-transform: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.slider-item-text {
+  padding-top: 20px;
+  padding-bottom: 39px;
 }
 
 .slider-image-one {
   background-image: url(../img/index/slider-slide1.png);
-  width: 760px;
+  background-repeat: no-repeat;
+  background-position: 395px 50%;
+  width: 1157px;
   height: 431px;
 }
 
 .slider-image-two {
   background-image: url(../img/index/slider-slide2.png);
-  width: 760px;
+  background-repeat: no-repeat;
+  background-position: 395px 50%;
+  width: 1157px;
   height: 431px;
 }
 
 .slider-image-three {
   background-image: url(../img/index/slider-slide3.png);
-  width: 760px;
+  background-repeat: no-repeat;
+  background-position: 395px 50%;
+  width: 1157px;
   height: 431px;
+}
+
+.hidden {
+  display: none;
 }
 
 .visually-hidden {
@@ -195,6 +257,12 @@ img{
 }
 
 /*услуги */
+
+.services {
+  margin-top: 80px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid var(--lighter-grey, #eeeeee);
+}
 
 .services-list{
   list-style: none;
@@ -268,8 +336,7 @@ img{
 
 .partners-list {
   list-style: none;
-  padding-top: 46px;
-  padding-bottom: 44px;
+  padding: 40px 0px 46px 32px;
   margin: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -487,7 +554,6 @@ img{
   position: relative;
 }
 
-
 .contacts-info {
   font-weight: normal;
   font-size: 16px;
@@ -505,11 +571,16 @@ img{
   right: 0px;
 }
 
+.contacts-info {
+  text-transform: none;
+}
+
 .contacts-header {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
 }
+
 .contacts-address {
   font-style: normal;
 }
@@ -518,32 +589,21 @@ img{
   color: inherit;
 }
 
-.friendship-header {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 36px;
-}
-.discount {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  columns: var(--dark-grey, #444444);
-}
-
 .socialnetworks-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 40px;
+  padding-top: 75px;
+  padding-bottom: 74px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-
 .socialnetworks-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0px;
   padding: 0px;
-}
-
-.socialnetworks-list li {
-  display: inline-block;
+  width: 319px;
 }
 
 .vk {
@@ -576,8 +636,7 @@ img{
   vertical-align: middle;
 }
 
-
-.socialnetworks-container {
+.socialnetworks-shape {
   display: block;
   width: 81px;
   height: 81px;
@@ -586,18 +645,35 @@ img{
   display: table;
 }
 
-.socialnetworks-container:hover {
+.socialnetworks-shape:hover {
   background-color: var(--hover-red, #e74246);
 }
 
-.socialnetworks-container:active {
+.socialnetworks-shape:active {
   background-color: var(--action-red, #d7373b);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.socialnetworks-container:active .fb{
+.socialnetworks-shape:active .fb{
   opacity: 0.3;
 }
+
+.friendship-header {
+  text-transform: none;
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+.discount {
+  text-transform: none;
+  margin: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  columns: var(--dark-grey, #444444);
+}
+
 
 /*контактная форма*/
 .contactform {
