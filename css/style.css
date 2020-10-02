@@ -160,13 +160,11 @@ img{
   color: var(--basic-red, #fb565a);
 }
 
-.main-user-navigarion {
+.cart-refference {
   font-size: 16px;
   line-height: 30px;
   font-weight: normal;
   position: relative;
-}
-.cart-refference {
   padding-left: 30px;
   padding-bottom: 13px;
 }
@@ -286,7 +284,6 @@ img{
 .aboutus {
   text-transform: none;
   padding-top: 39px;
-  border-top: 2px solid var(--lighter-grey, #eeeeee);
 
 }
 
@@ -336,17 +333,20 @@ img{
 
 .partners-list {
   list-style: none;
-  padding: 40px 0px 46px 32px;
+  padding: 40px 0px 46px 0px;
   margin: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px;
+  column-gap: 20px;
   border-top: 2px solid var(--lighter-grey, #eeeeee);
   border-bottom: 2px solid var(--lighter-grey, #eeeeee);
 }
 
 .partners-item {
   opacity: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .partners-item:hover {
@@ -383,13 +383,32 @@ img{
 .filter {
   grid-column: 1/2;
   grid-row: 2/-1;
+  width: 260px;
 }
 
-.filter-header {
+.filter-form-group {
+  border: none;
+  padding: 0px;
+}
+
+.filter-form-header {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   color: var(--black, #000000);
+}
+
+.filter-form-range-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.filter-form-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: none;
 }
 
 .filter input {
@@ -402,6 +421,11 @@ img{
   grid-row: 2/3;
 }
 
+.catalog-sorting-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .catalog-sorting-header {
   font-weight: bold;
   font-size: 18px;
@@ -410,10 +434,14 @@ img{
 }
 
 .catalog-sorting-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  width: 360px;
 }
 
 .catalog-sorting-navigation a {
@@ -515,32 +543,49 @@ img{
 }
 
 .pagination-list {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+  padding: 0px;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  width: 342px;
 }
 
-.pagination-item a {
+.pagination-item {
+  padding: 17px 20px 15px 20px;
   color: var(--black, #000000);
   background-color: var( --lighter-grey, #eeeeee);
   border: none;
   border-radius: 3px;
 }
 
-.pagination-list a:hover {
- background-color: var(--pagination-grey, #dfdfdf);
+.pagination-item-disabled {
+  padding: 14px 17px 12px 17px;
+  /*box-sizing: border-box;*/
+  background-color: var(--white, #ffffff);
+  border: 3px solid var(--pagination-grey, #dbdbdb);
+  border-radius: 3px;
 }
 
-.pagination-list a:active {
+.pagination-list a {
+  color: inherit;
+}
+
+.pagination-item:hover {
+  background-color: var(--pagination-grey, #dfdfdf);
+}
+
+.pagination-item:active {
   color: var(--slightly-transparent-black, rgba(0, 0, 0, 0.3));
   background-color: var(--padding-liter-grey, #d5d5d5);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.pagination-list a:focus {
+.pagination-item:focus {
   background: var(--focus-black, rgba(0, 0, 0, 0.0001));
-  border: 3px solid var(--pagination-grey, #dbdbdb); /*Блин, 100500 оттенков серого, пора книгу писатью. Даже не могу как то это систематизировать так с ходу.*/
+  border: 3px solid var(--pagination-grey, #dbdbdb);
 }
 
 /*Тут будут контакты в футере*/
