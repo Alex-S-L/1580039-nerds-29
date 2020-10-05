@@ -1,6 +1,7 @@
 :root {
  --black: #000000;
  --slightly-transparent-black: rgba(0, 0, 0, 0.3);
+ --contactform-black: rgba(0, 0, 0, 0.4);
  --transparent-black: rgba(0, 0, 0, 0.6);
  --focus-black: rgba(0, 0, 0, 0.0001);
  --liter-black: #283136;
@@ -29,6 +30,9 @@
  --padding-liter-grey: #d5d5d5;
  --pagination-grey: #dbdbdb;
  --socials-grye: #e1e1e1;
+ --slider-button-grey: #c1c1c1;
+
+ --button-shadow: rgba(0, 1, 1, 0.1);
 }
 @font-face {
   font-family: 'Roboto';
@@ -110,7 +114,7 @@ img{
 .navigation-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding-top: 49px;
 }
 
@@ -136,18 +140,13 @@ img{
   list-style: none;
   width: 437px;
   padding: 0px;
+  margin: 0px;
 
 }
-
-.main-navigation-item a {
-  padding-bottom: 13px;
-}
-
-.main-navigation-item a:focus {
-  border-bottom: 2px solid var(--basic-red, #fb565a);
-}
-.cart-refference:focus {
-  border-bottom: 2px solid var(--basic-red, #fb565a);
+.main-navigation a {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .main-site-navigation a,
@@ -155,18 +154,23 @@ img{
   color: var(--black, #000000);
 }
 
-.main-site-navigation a:hover,
-.cart-icon:hover {
+.main-navigation a:hover {
   color: var(--basic-red, #fb565a);
 }
 
+.main-navigation a:active {
+  color: var(--reference-grey, #a7a7a7);
+}
+
 .cart-refference {
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: normal;
   position: relative;
   padding-left: 30px;
-  padding-bottom: 13px;
+}
+
+.cart-icon {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .cart-icon::before {
@@ -175,16 +179,27 @@ img{
  height: 15px;
  position: absolute;
  left: 0px;
- top: 6px;
+ top: 26px;
  background-image: url("../img/cart-icon.svg");
 }
 
-.main-site-navigation a:active,
+.cart-icon:hover {
+  color: var(--basic-red, #fb565a);
+}
+
 .cart-icon:active {
   color: var(--reference-grey, #a7a7a7);
 }
 
+.chosen-navigation-item {
+  border-bottom: 2px solid var(--basic-red, #fb565a); /*Потом повешу эту штуку на чердак магазина. Так-же это должно выглядеть?*/
+}
+
 .slider {
+  position: relative;
+}
+
+.slider-list {
   grid-column: 1/-1;
   justify-self: center;
   list-style: none;
@@ -197,6 +212,7 @@ img{
 
 .slider-item {
   width: 100%;
+  display: none;
 }
 
 .slider-info {
@@ -242,9 +258,46 @@ img{
   height: 431px;
 }
 
-.hidden {
-  display: none;
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 88px;
+  height: 18px;
+  background-color: transparent;
 }
+
+.slider-controls button {
+  position: relative;
+  padding: 0px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white, #ffffff);
+  outline: none;
+}
+
+.slider-controls .current::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  left: 5px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--slider-button-grey, #c1c1c1);
+  border-radius: 50%;
+  background-color: var(--white, #ffffff);
+
+}
+
+.slide-current {
+  display: block;
+}
+
 
 .visually-hidden {
   position: absolute;
@@ -305,7 +358,22 @@ img{
 }
 
 .aboutus-list {
-  list-style-image: url("../img/index/icons/list-icon.svg");
+  list-style: none;
+}
+
+.aboutus-list-item {
+  position: relative;
+}
+
+.aboutus-list-item:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -35px;
+  width: 25px;
+  height: 2px;
+  background-color: var( --basic-red, #fb565a);
+
 }
 
 .about-us {
@@ -333,13 +401,16 @@ img{
 
 .partners-list {
   list-style: none;
-  padding: 40px 0px 46px 0px;
+  padding: 0px;
   margin: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   border-top: 2px solid var(--lighter-grey, #eeeeee);
   border-bottom: 2px solid var(--lighter-grey, #eeeeee);
+  background-image: url(../img/index/icons/list-icon.svg);
+  background-repeat: repeat-y;
+  background-position: 278px 0px;
 }
 
 .partners-item {
@@ -722,7 +793,21 @@ img{
 
 /*контактная форма*/
 .contactform {
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 85px;
+  padding-right: 99px;
+  padding-bottom: 84px;
+  padding-left: 100px;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--black, #000000);
+  width: 960px;
+  margin: 0 auto;
   background-color: var(--white, #ffffff);
+  box-shadow: 0px 20px 40px var(--contactform-black, rgba(0, 0, 0, 0.4));
 }
 
 .contactform-header {
@@ -732,13 +817,58 @@ img{
   color: var(--black, #000000);
 }
 
-.contactform-title {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-  color: var(--black, #000000);
+.contactform-grid {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
 }
 
+.contactform-header {
+  grid-column: 1/-1;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.contactform-col-one {
+  grid-column: 1/2;
+}
+
+.contactform-col-two {
+  grid-column: 2/3;
+}
+
+.contactform-max-width {
+  grid-column: 1/-1;
+}
+
+.contactform input:not([type=submit]) {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+.contactform textarea {
+  width: 100%;
+  height: 119px;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+
+.button-close {
+  position: absolute;
+  top: 63px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  background-image: url(../img/close-cross.svg);
+  outline: none;
+  border: none;
+  opacity: 0.3;
+}
 
 /*Тут будут кнопки*/
 .button {
@@ -747,65 +877,77 @@ img{
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  background-color: var(--basic-red, #fb565a);
+  text-transform: uppercase;
   border: none;
   outline: none;
   border-radius: 3px;
   padding: 15px 40px;
 }
+
+.button-red {
+  background-color: var(--basic-red, #fb565a);
+}
+
+.button-green {
+  background-color: var(--basic-green, #00ca74);
+}
+
+.button-yellow {
+  background-color: var(--basic-yellow, #efc849);
+}
+
 .catalog-products-button {
   padding: 17px 72px 15px 72px;
 }
 
-.slider-button{
-  border: none;
+.slider-button {
+  padding: 17px 54px;
 }
 
-.slider-button-action:hover {
+.services-button {
+  padding: 17px 40px 15px 39px;
+}
+
+.contacts-button {
+  padding: 17px 44px 15px 44px;
+}
+
+.contactform-button {
+  padding: 17px 83px 15px 83px;
+}
+
+.red-button-action:hover {
   background-color: var(--hover-red, #E74246);
-  border: none;
 }
 
-.slider-button-action:active {
+.red-button-action:active {
   background-color: var(--action-red, #D7373B);
   color: rgba(255, 255, 255, 0.3);
-  border: none;
+  box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
-.service-red-button-action:hover {
-  background-color: var(--hover-red, #E74246);
-  border: none;
-}
-.service-red-button-action:active {
-  background-color: var(--action-red, #D7373B);
-  color: rgba(255, 255, 255, 0.3);
-  border: none;
-}
-
-.green-button {
-  background-color: var(--basic-green, #00ca74);
-  border: none;
-}
 .service-green-button-action:hover {
   background-color: var(--hover-green, #00bc6c);
-  border: none;
 }
 .service-green-button-action:active {
   background-color: var(--action-green, #00aa62);
   color: rgba(255, 255, 255, 0.3);
-  border: none;
+  box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
-.yellow-button {
-  background-color: var(--basic-yellow, #efc849);
-  border: none;
-}
 .service-yellow-button-action:hover {
   background-color: var(--hover-yellow, #eab534);
-  border: none;
 }
 .service-yellow-button-action:active {
   background-color: var(--action-yellow, #e5a722);
   color: rgba(255, 255, 255, 0.3);
-  border: none;
+  box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
+}
+
+.button-close:hover {
+  opacity: 1;
+}
+
+.button-close:active {
+  opacity: 0.1;
 }
