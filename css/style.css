@@ -196,7 +196,7 @@ img{
 }
 
 .chosen-navigation-item {
-  border-bottom: 2px solid var(--basic-red, #fb565a); /*Потом повешу эту штуку на чердак магазина. Так-же это должно выглядеть?*/
+  border-bottom: 2px solid var(--basic-red, #fb565a);
 }
 
 .slider {
@@ -465,6 +465,7 @@ img{
   grid-template-columns: 1fr 2fr;
   grid-template-rows: min-content min-content 1fr;
   grid-gap: 40px;
+  margin-bottom: 60px;
 }
 
 .catalog-page-header {
@@ -480,18 +481,12 @@ img{
 .filter {
   grid-column: 1/2;
   grid-row: 2/-1;
-}
-
-
-.filter-form-group {
-  border: none;
-  padding: 0px;
-  margin: 0px;
+  margin-right: auto;
 }
 
 .fiter-form-range-control {
   height: 41px;
-  margin-top: 48px;
+  margin-top: 30px;
   margin-bottom: 14px;
   background-color: var( --lighter-grey, #eeeeee);
   border-radius: 3px;
@@ -501,6 +496,7 @@ img{
 }
 
 .range {
+  margin: 0px;
   width: 205px;
   height: 2px;
   background-color: var(--range-grey, #D7DCDF);
@@ -534,14 +530,9 @@ img{
   left: 100px;
 }
 
-.filter-form-header {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-  color: var(--black, #000000);
-}
-
 .filter-form-price-controls {
+  display: flex;
+  justify-content: space-between;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -552,10 +543,51 @@ img{
   font-size: inherit;
   line-height: inherit;
   text-align: center;
-  border: none;
+  border: 2px solid var(--range-grey, #D7DCDF);
   border-radius: 3px;
-  background-color: var(--white, #ffffff);
+  background-color: var(--lighter-grey, #eeeeee);
   color: var(--liter-black, #283136);
+  padding: 8px 0px;
+  width: 80px;
+  margin-left: 11px;
+}
+
+.filter-form-price-controls input:hover {
+  border-color: var(--popup-grey, #B4B9BB);
+}
+
+.filter-form-price-controls input:focus {
+  border-color: var(--black, #000000);
+  color: var(--black, #000000);
+}
+
+.filter-form-price-controls input:invalid {
+  border-color: var(--hover-red, #e74246);
+}
+
+/*не понимаю как поменять цвет текста для inputa для невалидных значений и при фокусировке.*/
+
+.filter-form-group {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.filter-form-group:nth-of-type(2) {
+  margin-top: 36px;
+}
+
+.filter-form-group:nth-of-type(3) {
+  margin-top: 25px;
+  margin-bottom: 48px;
+}
+
+.filter-form-header {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--black, #000000);
+  margin: 18px 0;
 }
 
 .filter-form-list {
@@ -781,6 +813,7 @@ img{
   font-size: 16px;
   line-height: 18px;
   width: 342px;
+  margin-top: 55px;
 }
 
 .pagination-item {
@@ -1030,6 +1063,7 @@ img{
 .contactform input:not([type=submit]):focus,
 .contactform textarea:focus {
   border: 2px solid var(--black, #000000);
+  color: red;
 }
 
 .contactform input:invalid {
@@ -1044,10 +1078,11 @@ img{
   width: 21px;
   height: 21px;
   background-image: url(../img/close-cross.svg);
+  background-repeat: no-repeat;
   background-color: transparent;
   outline: none;
   border: none;
-  opacity: 0.3;
+  padding: 0px;
 }
 
 /*Тут будут кнопки*/
@@ -1094,6 +1129,21 @@ img{
 
 .contactform-button {
   padding: 17px 83px 15px 83px;
+}
+
+.filter-button {
+  padding: 17px 89px 15px 88px;
+  color: var(--black, #000000);
+  background-color: var(--lighter-grey, #eeeeee);
+}
+
+.filter-button:hover {
+  background-color: var(--pagination-grey, #dfdfdf);
+}
+
+.filter-button:active {
+  background-color: var(--padding-liter-grey, #d5d5d5);
+  box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
 .red-button-action:hover {
