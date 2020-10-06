@@ -3,6 +3,7 @@
  --slightly-transparent-black: rgba(0, 0, 0, 0.3);
  --contactform-black: rgba(0, 0, 0, 0.4);
  --transparent-black: rgba(0, 0, 0, 0.6);
+ --toggle-shadow-black: rgba(0, 0, 0, 0.15);
  --focus-black: rgba(0, 0, 0, 0.0001);
  --liter-black: #283136;
  --sorting-arrow-black: #231f20;
@@ -15,6 +16,7 @@
  --basic-green: #00ca74;
  --hover-green: #00bc6c;
  --action-green: #00aa62;
+ --range-green: #00CA74;
 
  --basic-yellow: #efc849;
  --hover-yellow: #eab534;
@@ -31,8 +33,10 @@
  --pagination-grey: #dbdbdb;
  --socials-grye: #e1e1e1;
  --slider-button-grey: #c1c1c1;
-
+ --range-grey: #D7DCDF;
  --button-shadow: rgba(0, 1, 1, 0.1);
+ --toggle-grey: #ababab;
+ --popup-grey: #B4B9BB;
 }
 @font-face {
   font-family: 'Roboto';
@@ -311,7 +315,7 @@ img{
 
 .services {
   margin-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 95px;
   border-bottom: 2px solid var(--lighter-grey, #eeeeee);
 }
 
@@ -332,6 +336,7 @@ img{
 .services-info {
   text-transform: none;
   padding-right: 60px;
+  margin-bottom: 49px;
 }
 
 .aboutus {
@@ -373,13 +378,19 @@ img{
   width: 25px;
   height: 2px;
   background-color: var( --basic-red, #fb565a);
+}
 
+.aboutus-table-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .about-us {
   width: 360px;
   height: 206px;
   background-image: url(../img/index/nerds-selebration.png);
+  margin-bottom: 37px;
 }
 
 .figure {
@@ -392,11 +403,16 @@ img{
   font-weight: bold;
   font-size: 26px;
   line-height: 40px;
+  vertical-align: 15px;
 }
 
 .table-text {
   font-size: 16px;
   line-height: 18px;
+}
+
+.partners {
+  margin-bottom: 80px;
 }
 
 .partners-list {
@@ -408,9 +424,8 @@ img{
   column-gap: 20px;
   border-top: 2px solid var(--lighter-grey, #eeeeee);
   border-bottom: 2px solid var(--lighter-grey, #eeeeee);
-  background-image: url(../img/index/icons/list-icon.svg);
-  background-repeat: repeat-y;
-  background-position: 278px 0px;
+  padding-top: 46px;
+  padding-bottom: 44px;
 }
 
 .partners-item {
@@ -418,6 +433,17 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.partners-item:not(:nth-of-type(4n))::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  height: 52px;
+  width: 2px;
+  background-color: var(--lighter-grey, #eeeeee);
 }
 
 .partners-item:hover {
@@ -454,12 +480,58 @@ img{
 .filter {
   grid-column: 1/2;
   grid-row: 2/-1;
-  width: 260px;
 }
+
 
 .filter-form-group {
   border: none;
   padding: 0px;
+  margin: 0px;
+}
+
+.fiter-form-range-control {
+  height: 41px;
+  margin-top: 48px;
+  margin-bottom: 14px;
+  background-color: var( --lighter-grey, #eeeeee);
+  border-radius: 3px;
+  padding-top: 39px;
+  padding-left: 33px;
+  padding-right: 22px;
+}
+
+.range {
+  width: 205px;
+  height: 2px;
+  background-color: var(--range-grey, #D7DCDF);
+}
+
+.bar {
+  width: 50%;
+  height: 2px;
+  background-color: var(--range-green, #00CA74);
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  border: 8px solid var(--white, #ffffff);
+  border-radius: 50%;
+  background-color: var(--toggle-grey, #ababab);
+  box-shadow: 0px 2px 1px var(--toggle-shadow-black, rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+}
+
+.toggle-min{
+  left:0px;
+}
+
+.toggle-max {
+  left: 100px;
 }
 
 .filter-form-header {
@@ -469,22 +541,109 @@ img{
   color: var(--black, #000000);
 }
 
-.filter-form-range-text {
+.filter-form-price-controls {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
 }
 
-.filter-form-text {
+.filter-form-price-controls input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--white, #ffffff);
+  color: var(--liter-black, #283136);
+}
+
+.filter-form-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.filter-form-list-item {
+  text-transform: none;
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  text-transform: none;
+  padding-left: 45px;
+  margin-bottom: 20px;
 }
 
-.filter input {
-  color: var(--filter-grey, #4d4d4d);
+.filter-form-list-item label {
+  display: block;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.form-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0px;
+  width: 25px;
+  height: 25px;
+  border: 3px solid var( --filter-grey, #4d4d4d);
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--white, #ffffff);
   opacity: 0.4;
+}
+
+.form-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--filter-grey, #4d4d4d);
+  opacity: 0.4;
+}
+
+.form-input-checkbox + label::before {
+  content: "";
+  background-image: url(../img/catalog/checkbox-off.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -40px;
+  top: 0px;
+  width: 25px;
+  height: 23px;
+  opacity: 0.4;
+}
+
+.form-input-checkbox:checked + label::before {
+  content: "";
+  background-image: url(../img/catalog/checkbox-on.svg);
+  position: absolute;
+  left: -40px;
+  top: 0px;
+  width: 25px;
+  height: 23px;
+  opacity: 0.4;
+}
+
+.form-input-checkbox:hover + label::before,
+.form-input-radio:hover + label::before,
+.form-input-radio:hover + label::after {
+  opacity: 1;
+}
+
+.disabled {
+  color: var(--liter-black, #283136);
+  opacity: 0.3;
+}
+
+.disabled:hover label::before,
+.disabled:hover label::after {
+  opacity: 0.1;
 }
 
 .catalog-sorting {
@@ -848,6 +1007,8 @@ img{
   padding-top: 16px;
   padding-left: 16px;
   padding-bottom: 16px;
+  border: 2px solid var(--range-grey, #D7DCDF);
+  border-radius: 3px;
 }
 
 .contactform textarea {
@@ -856,6 +1017,24 @@ img{
   box-sizing: border-box;
   padding-top: 16px;
   padding-left: 16px;
+  margin-bottom: 47px;
+  border: 2px solid var(--range-grey, #D7DCDF);
+  border-radius: 3px;
+}
+
+.contactform input:not([type=submit]):hover,
+.contactform textarea:hover {
+  border: 2px solid var(--popup-grey, #B4B9BB);
+}
+
+.contactform input:not([type=submit]):focus,
+.contactform textarea:focus {
+  border: 2px solid var(--black, #000000);
+}
+
+.contactform input:invalid {
+  border: 2px solid var(--hover-red, #e74246);
+  color: var(--hover-red, #e74246);
 }
 
 .button-close {
@@ -865,6 +1044,7 @@ img{
   width: 21px;
   height: 21px;
   background-image: url(../img/close-cross.svg);
+  background-color: transparent;
   outline: none;
   border: none;
   opacity: 0.3;
