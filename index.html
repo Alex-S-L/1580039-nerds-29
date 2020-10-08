@@ -140,10 +140,12 @@
           <div class="contacts-info">
             <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
             <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
-            <p><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
+            <p class="contacts-phone-wrapper"><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
             <button class="button button-red red-button-action contacts-button" type="submit">Напишите нам</button>
           </div>
-          <a class="map-marker" href="index.html"><img src="img/map-marker.png" alt="логотип"></a>
+          <a class="map-marker" href="index.html">
+            <img src="img/map-marker.png" alt="логотип">
+          </a>
         </div>
       </section>
 
@@ -182,15 +184,15 @@
           <h3 class="contactform-header">Напишите нам</h3>
           <div class="contactform-col-one">
             <p><label for="user-name">Ваше имя</label></p>
-            <input type="text" name="user-name" id="user-name" placeholder="Имя Фамилия">
+            <input class="contactform-data-input data-input-text" type="text" pattern="[A-Za-zА-Яа-я]{1,20}" name="user-name" id="user-name" placeholder="Имя Фамилия">
           </div>
           <div class="contactform-col-two">
             <p><label for="email">Ваше e-mail:</label></p>
-            <input type="email" name="email" id="email" pattern="" placeholder="e-mail@example.com">
+            <input class="contactform-data-input data-input-text" type="text"  name="email" id="email" pattern="[^@]{1,}[@]{1}[^@]{1,}[^@]{2,4}" placeholder="e-mail@example.com"> <!-- Чёта я пока что туплю как тут реализовать pattern для email.  -->
           </div>
           <div class="contactform-max-width">
             <p><label for="letter">Текст письма:</label></p>
-            <textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
+            <textarea class="contactform-data-input" name="letter" id="letter" placeholder="В свободной форме"></textarea>
           </div>
           <div class="contactform-max-width">
             <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
@@ -198,8 +200,6 @@
       </form>
       <button class="button-close modal-close" type="button"></button>
     </section>
-
-    <!-- Не отпускает ощущение что я сильно перемудрил и можно проще, но пока не понимаю как. -->
 
   </body>
 </html>

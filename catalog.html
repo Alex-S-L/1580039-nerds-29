@@ -11,7 +11,7 @@
   <body class="page-body inner-page">
 
     <header class="main-header">
-     <div class="navigation-wrapper container">
+      <div class="navigation-wrapper container">
           <nav class="main-navigation">
             <a class="main-header-logo" href="index.html">
               <img class="main-header-logo-pic" src="img/nerds-logo.svg" alt="логотип" width="160" height="65">
@@ -38,7 +38,6 @@
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="filter-form-group">
               <p class="filter-form-header clearfix">стоимость</p>
-              <!-- Стоит ли тег legend всей той камасутры с позиционированием? Или есть какой-нибудь лёгкий и изящный способ как сделать всё красиво?-->
               <div class="filter-form-range clearfix">
                 <div class="fiter-form-range-control">
                   <div class="range">
@@ -49,8 +48,8 @@
                   </div>
                 </div>
                 <div class="filter-form-price-controls">
-                  <label class="filter-form-price-lable">от<input type="number" name="minprice" id="minprice"></label>
-                  <label class="filter-form-price-lable">до<input type="number" name="maxprice" id="maxprice"></label>
+                  <label class="filter-form-price-lable">от<input class="min-price" max="15000" min="0" placeholder=" " type="number" name="minprice" id="minprice"></label>
+                  <label class="filter-form-price-lable">до<input class="max-price" max="15000" min="0" placeholder=" " type="number" name="maxprice" id="maxprice"></label>
                 </div>
               </div>
             </fieldset>
@@ -74,7 +73,7 @@
                   <li class="filter-form-list-item">
                     <input class="visually-hidden form-input-checkbox" type="checkbox" name="slider" id="slider" checked><label for="slider">Слайдер</label>
                   </li>
-                  <li class="filter-form-list-item disabled"> <!-- Знаю что в макете нету, но в стайлгайде есть. Чисто чтоб показать прилепил.=)  -->
+                  <li class="filter-form-list-item disabled">
                     <input class="visually-hidden form-input-checkbox" type="checkbox" name="advantage" id="advantage"><label for="advantage">Блок преимуществ</label>
                   </li>
                   <li class="filter-form-list-item">
@@ -243,8 +242,8 @@
           <div class="contacts-info">
             <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
             <address class="contacts-address">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</address>
-            <p><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
-            <button class="button contactdata-button" type="submit">Напишите нам</button>
+            <p class="contacts-phone-wrapper"><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
+            <button class="button button-red red-button-action contacts-button" type="submit">Напишите нам</button>
           </div>
           <a class="map-marker" href="index.html"><img src="img/map-marker.png" alt="логотип"></a>
         </div>
@@ -279,19 +278,28 @@
 
     </footer>
 
-    <section class="contactform hidden">
-      <h2>Контактная форма</h2>
-      <form action="#" method="get">
-        <h2  class="contactform-header">Напишите нам</h2>
-        <p class="contactform-title"><label for="user-name">Ваше имя</label></p>
-        <input type="text" name="user-name" id="user-name" placeholder="Имя Фамилия">
-        <p class="contactform-title"><label for="email">Ваше e-mail:</label></p>
-        <input type="email" name="email" id="email" placeholder="e-mail@example.com">
-        <p class="contactform-title"><label for="letter">Текст письма:</label></p>
-        <textarea name="letter" id="letter" placeholder="В свободной форме"></textarea>
-        <input class="button" type="submit" name="submit" value="отправить">
+    <section class="contactform">
+      <h2 class="visually-hidden">Контактная форма</h2>
+      <form class="contactform-grid" action="#" method="get">
+          <h3 class="contactform-header">Напишите нам</h3>
+          <div class="contactform-col-one">
+            <p><label for="user-name">Ваше имя</label></p>
+            <input class="contactform-data-input data-input-text" type="text" pattern="[A-Za-zА-Яа-я]{1,20}" name="user-name" id="user-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="contactform-col-two">
+            <p><label for="email">Ваше e-mail:</label></p>
+            <input class="contactform-data-input data-input-text" type="text"  name="email" id="email" pattern="[^@]{1,}[@]{1}[^@]{1,}[^@]{2,4}" placeholder="e-mail@example.com"> <!-- Чёта я пока что туплю как тут реализовать pattern для email.  -->
+          </div>
+          <div class="contactform-max-width">
+            <p><label for="letter">Текст письма:</label></p>
+            <textarea class="contactform-data-input" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+          </div>
+          <div class="contactform-max-width">
+            <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
+          </div>
       </form>
-      <button class="modal-close" type="button">закрыть</button>
+      <button class="button-close modal-close" type="button"></button>
     </section>
+
   </body>
 </html>

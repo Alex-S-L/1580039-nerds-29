@@ -1,5 +1,7 @@
 :root {
  --black: #000000;
+ --popup-shadow-black: rgba(0, 1, 1, 0.25);
+ --button-shadow: rgba(0, 1, 1, 0.1);
  --slightly-transparent-black: rgba(0, 0, 0, 0.3);
  --contactform-black: rgba(0, 0, 0, 0.4);
  --transparent-black: rgba(0, 0, 0, 0.6);
@@ -34,7 +36,6 @@
  --socials-grye: #e1e1e1;
  --slider-button-grey: #c1c1c1;
  --range-grey: #D7DCDF;
- --button-shadow: rgba(0, 1, 1, 0.1);
  --toggle-grey: #ababab;
  --popup-grey: #B4B9BB;
 }
@@ -145,11 +146,11 @@ img{
   width: 437px;
   padding: 0px;
   margin: 0px;
-
+  padding-top: 25px;
 }
 .main-navigation a {
   display: block;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-bottom: 20px;
 }
 
@@ -168,6 +169,7 @@ img{
 
 .cart-refference {
   position: relative;
+  padding-top: 30px;
   padding-left: 30px;
 }
 
@@ -183,7 +185,7 @@ img{
  height: 15px;
  position: absolute;
  left: 0px;
- top: 26px;
+ top: 55px;
  background-image: url("../img/cart-icon.svg");
 }
 
@@ -436,6 +438,10 @@ img{
   position: relative;
 }
 
+.partners-item a {
+  cursor: pointer;
+}
+
 .partners-item:not(:nth-of-type(4n))::after {
   content: "";
   position: absolute;
@@ -536,6 +542,7 @@ img{
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  text-transform: uppercase;
 }
 
 .filter-form-price-controls input {
@@ -546,22 +553,44 @@ img{
   border: 2px solid var(--range-grey, #D7DCDF);
   border-radius: 3px;
   background-color: var(--lighter-grey, #eeeeee);
-  color: var(--liter-black, #283136);
+  color: var(--dark-grey, #444444);
   padding: 8px 0px;
   width: 80px;
   margin-left: 11px;
 }
 
-.filter-form-price-controls input:hover {
+.min-price::-webkit-inner-spin-button,
+.min-price::-webkit-outer-spin-button,
+.max-price::-webkit-inner-spin-button,
+.max-price::-webkit-outer-spin-button {
+  -webkit-appearance: text-field;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0px;
+  display: none;
+}
+
+.min-price:hover,
+.max-price:hover {
   border-color: var(--popup-grey, #B4B9BB);
 }
 
-.filter-form-price-controls input:focus {
+.min-price:focus,
+.max-price:focus {
   border-color: var(--black, #000000);
   color: var(--black, #000000);
 }
 
-.filter-form-price-controls input:invalid {
+.min-price:invalid:focus,
+.max-price:invalid:focus {
+  border-color: var(--hover-red, #e74246);
+  color: var(--hover-red, #e74246);
+  outline: none;
+}
+
+.min-price:invalid:not(:placeholder-shown),
+.max-price:invalid:not(:placeholder-shown) {
+  color: var(--hover-red, #e74246);
   border-color: var(--hover-red, #e74246);
 }
 
@@ -756,8 +785,7 @@ img{
 }
 
 .catalog-products-cap {
-  opacity: 0
-  ;
+  opacity: 0;
 }
 .catalog-products-frame:hover .catalog-products-popup {
  opacity: 1;
@@ -777,10 +805,16 @@ img{
 .catalog-products-popup {
   opacity: 0;
   position: absolute;
-  bottom: 0px;
+  top: 389px;
   left: 0px;
-  padding: 0 45px;
-  background-color: var(--white, #ffffff);
+  padding: 0 45px 44px 45px;
+  box-shadow: 0px 6px 15px var(--popup-shadow-black, rgba(0, 1, 1, 0.25));
+  background-color: var(--lighter-grey, #eeeeee);
+}
+
+.catalog-products-header {
+  margin-top: 26px;
+  margin-bottom: 12px;
 }
 
 .catalog-products-header a {
@@ -802,6 +836,8 @@ img{
   font-size: 16px;
   line-height: 18px;
   color: var(--contact-form-grey, #666666);
+  margin-top: 0px;
+  margin-bottom: 32px
 }
 
 .pagination-list {
@@ -887,10 +923,16 @@ img{
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
+  margin-top: 0px;
+  margin-bottom: 23px
 }
 
 .contacts-address {
   font-style: normal;
+}
+
+.contacts-phone-wrapper {
+  margin-bottom: 37px;
 }
 
 .contacts-phone {
@@ -1034,7 +1076,7 @@ img{
   grid-column: 1/-1;
 }
 
-.contactform input:not([type=submit]) {
+.contactform-data-input {
   width: 100%;
   box-sizing: border-box;
   padding-top: 16px;
@@ -1044,7 +1086,7 @@ img{
   border-radius: 3px;
 }
 
-.contactform textarea {
+textarea.contactform-data-input {
   width: 100%;
   height: 119px;
   box-sizing: border-box;
@@ -1055,34 +1097,40 @@ img{
   border-radius: 3px;
 }
 
-.contactform input:not([type=submit]):hover,
-.contactform textarea:hover {
+.contactform-data-input:hover {
   border: 2px solid var(--popup-grey, #B4B9BB);
 }
 
-.contactform input:not([type=submit]):focus,
-.contactform textarea:focus {
+.contactform-data-input:focus {
   border: 2px solid var(--black, #000000);
-  color: red;
 }
 
-.contactform input:invalid {
-  border: 2px solid var(--hover-red, #e74246);
+.contactform-data-input::-webkit-input-placeholder {
+  color: var(--dark-grey, #444444);
+  opacity: 0.3;
+}
+
+.contactform-data-input:hover::-webkit-input-placeholder {
+  opacity: 0.4;
+}
+
+.contactform-data-input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.data-input-text:invalid {
   color: var(--hover-red, #e74246);
+  border: 2px solid var(--hover-red, #e74246);
 }
 
-.button-close {
-  position: absolute;
-  top: 63px;
-  right: 90px;
-  width: 21px;
-  height: 21px;
-  background-image: url(../img/close-cross.svg);
-  background-repeat: no-repeat;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  padding: 0px;
+.data-input-text:invalid:focus {
+  border: 2px solid var(--hover-red, #e74246);
+  outline:none;
+}
+
+.data-input-text:invalid:not(:placeholder-shown) {
+  color: var(--hover-red, #e74246);
+  border: 2px solid var(--hover-red, #e74246);
 }
 
 /*Тут будут кнопки*/
@@ -1097,6 +1145,21 @@ img{
   outline: none;
   border-radius: 3px;
   padding: 15px 40px;
+}
+
+.button-close {
+  position: absolute;
+  top: 63px;
+  right: 90px;
+  width: 21px;
+  height: 21px;
+  background-image: url(../img/close-cross.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0px;
+  opacity: 0.3;
 }
 
 .button-red {
