@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script async defer src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqsxchj6qsgnu3Z7mza0_2NV5tqfypAc&callback=initMap"></script>
     <title>HTML Academy: Нёрдс</title>
   </head>
@@ -107,7 +107,7 @@
             <table class="aboutus-table">
               <caption class="aboutus-table-header">с 2004 года любим точность во всем:</caption>
               <tr>
-                <td class="figure table-coll-one">146<span class="percent">%</span></td> <!--  У меня как всегда ощущение что я нагородил лишнего, буду благодарен за идею как можно было сделать проще и изящнее. =) -->
+                <td class="figure table-coll-one">146<span class="percent">%</span></td>
                 <td class="figure table-coll-two">100<span class="percent">%</span></td>
                 <td class="figure table-coll-three">50<span class="percent">%</span></td>
               </tr>
@@ -144,7 +144,9 @@
               <button class="button button-red red-button-action contacts-button" type="submit">Напишите нам</button>
             </div>
           </div>
-            <div id="map" class="map"></div>
+            <div id="map" class="map">
+              <div class="alternative-map"></div>
+            </div>
         </section>
 
       <section class="social-links container">
@@ -196,9 +198,9 @@
             <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
           </div>
       </form>
-      <button class="button-close modal-close" type="button"></button>
+      <button class="button-close modal-close" type="button"><span class="visually-hidden">закрыть</span></button>
     </section>
-<!-- пока не придумал как реализовать модельное окно. Должно ли оно как то особо появляться? Есть ли к нему какие то особые требования, или можно его просто абсолютно спозиционировать относительно экрана да привязать к кнопке? -->
+
   </body>
 </html>
 

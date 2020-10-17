@@ -1011,6 +1011,16 @@ img{
   min-height: 416px;
 }
 
+.alternative-map {
+  background-image: url(../img/map-and-marker.jpg);
+  background-repeat: no-repeat;
+  background-size: 1440px 416px;
+  background-position: center;
+  height: 416px;
+  width: 1440px;
+  margin: 0 auto;
+}
+
 .contacts-info {
   position: absolute;
   top: 54px;
@@ -1148,9 +1158,7 @@ img{
 
 /*контактная форма*/
 .contactform {
-  display: none;
   box-sizing: border-box;
-  position: relative;
   padding-top: 85px;
   padding-right: 60px;
   padding-bottom: 63px;
@@ -1161,9 +1169,19 @@ img{
   line-height: 18px;
   color: var(--black, #000000);
   width: 941px;
-  margin: 0 auto;
-  background-color: red/*var(--white, #ffffff)*/;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 666;
+  display: none;
+  margin-top: -300px;
+  margin-left: -470px;
+  background-color: var(--white, #ffffff);
   box-shadow: 0px 20px 40px var(--contactform-black, rgba(0, 0, 0, 0.4));
+}
+
+.popup-visibility {
+  display: block;
 }
 
 .contactform-header {
