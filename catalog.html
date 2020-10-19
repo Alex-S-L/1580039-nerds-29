@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>catalog</title>
-    <script defer src="js/script.js"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqsxchj6qsgnu3Z7mza0_2NV5tqfypAc&callback=initMap"></script>
   </head>
 
   <body class="page-body inner-page">
@@ -281,29 +279,31 @@
 
     </footer>
 
-              <section class="contactform">
-                <h2 class="visually-hidden">Контактная форма</h2>
-                <form class="contactform-grid" action="#" method="get">
-            <h3 class="contactform-header">Напишите нам</h3>
-            <div class="contactform-col-one">
-              <p><label for="user-name">Ваше имя</label></p>
-              <input class="contactform-data-input data-input-text" type="text" pattern="[A-Za-zА-Яа-я]{1,20}" name="user-name" id="user-name" placeholder="Имя Фамилия">
-            </div>
-            <div class="contactform-col-two">
-              <p><label for="email">Ваше e-mail:</label></p>
-              <input class="contactform-data-input data-input-text" type="text"  name="email" id="email" pattern="[^@]{1,}[@]{1}[^@]{1,}[^@]{2,4}" placeholder="e-mail@example.com">
-            </div>
-            <div class="contactform-max-width">
-              <p><label for="letter">Текст письма:</label></p>
-              <textarea class="contactform-data-input" name="letter" id="letter" placeholder="В свободной форме"></textarea>
-            </div>
-            <div class="contactform-max-width">
-              <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
-            </div>
-                </form>
-                <button class="button-close modal-close" type="button"></button>
-              </section>
+    <section class="contactform">
+      <h2 class="visually-hidden">Контактная форма</h2>
+      <form class="contactform-grid" action="https://echo.htmlacademy.ru/" method="get">
+          <h3 class="contactform-header">Напишите нам</h3>
+          <div class="contactform-col-one">
+            <p class="contactform-title"><label for="user-name">Ваше имя:</label></p>
+            <input class="contactform-data-input data-input-text" type="text" pattern="[A-Za-zА-Яа-я]{1,20}" name="user-name" id="user-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="contactform-col-two">
+            <p class="contactform-title"><label for="email">Ваш email:</label></p>
+            <input class="contactform-data-input data-input-text" type="text"  name="email" id="email" pattern="[^@]{1,}[@]{1}[^@]{1,}[^@]{2,4}" placeholder="email@example.com">
+          </div>
+          <div class="contactform-max-width">
+            <p class="contactform-title"><label for="letter">Текст письма:</label></p>
+            <textarea class="contactform-data-input" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+          </div>
+          <div class="contactform-max-width">
+            <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
+          </div>
+      </form>
+      <button class="button-close modal-close" type="button"><span class="visually-hidden">закрыть</span></button>
+    </section>
 
-
+  <script src="js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGqsxchj6qsgnu3Z7mza0_2NV5tqfypAc&callback=initMap"></script>
   </body>
+
 </html>

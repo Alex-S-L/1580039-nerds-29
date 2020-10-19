@@ -1,3 +1,15 @@
+// Управление попапом
+let popupButtonOpen = document.querySelector('.contacts-button');
+  popupButtonOpen.onclick = function() {
+    document.querySelector('.contactform').classList.add('popup-visibility');
+  };
+
+let popupButtonClose = document.querySelector('.button-close');
+  popupButtonClose.onclick = function() {
+    document.querySelector('.contactform').classList.remove('popup-visibility');
+  };
+
+
 // Слайдер
 let sliderButtonOne = document.querySelector('.sider-controls-button-one');
 let sliderButtonTwo = document.querySelector('.sider-controls-button-two');
@@ -41,13 +53,4 @@ icon: 'img/map-marker.png'});
 google.maps.Map.prototype.markers = new Array();
 };
 
-// Управление попапом
-let popupButtonOpen = document.querySelector('.contacts-button');
-  popupButtonOpen.onclick = function() {
-    document.querySelector('.contactform').classList.add('popup-visibility');
-  };
 
-let popupButtonClose = document.querySelector('.button-close');
-  popupButtonClose.onclick = function() {
-    document.querySelector('.contactform').classList.remove('popup-visibility');
-  };
