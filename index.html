@@ -14,7 +14,7 @@
       <div class="main-header-wrapper container">
         <div class="navigation-wrapper">
           <nav class="main-navigation">
-            <a class="main-header-logo" href="index.html">
+            <a class="main-header-logo" href="index.html" tabindex="-1">
               <img class="main-header-logo-pic" src="img/nerds-logo.svg" alt="логотип" width="160" height="65">
             </a>
             <ul class="main-site-navigation">
@@ -54,8 +54,8 @@
           </ul>
           <div class="slider-controls">
             <button class="sider-controls-button-one current" type="button" aria-label="Первый слайд"></button>
-            <button class="sider-controls-button-two" type="button" aria-label="Первый слайд"></button>
-            <button class="sider-controls-button-three" type="button" aria-label="Первый слайд"></button>
+            <button class="sider-controls-button-two" type="button" aria-label="Второй слайд"></button>
+            <button class="sider-controls-button-three" type="button" aria-label="Третий слайд"></button>
           </div>
         </div>
       </div>
@@ -122,12 +122,13 @@
       <section class="partners">
         <h2 class="visually-hidden">Наши партнёры</h2>
         <ul class="partners-list">
-          <li class="partners-item"><a class="Htmlacademy-reference" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/index/parters/HTMLacademy.png" alt="Htmlacademy" width="199" height="68"></a></li>
-          <li class="partners-item"><a class="borodinski-reference"><img src="img/index/parters/borodinski.png" alt="borodinski"  width="209" height="90"></a></li>
-          <li class="partners-item"><a class="pink-reference"><img src="img/index/parters/pink.png" alt="pink"  width="185" height="52"></a></li>
-          <li class="partners-item"><a class="mishka-reference"><img src="img/index/parters/mishka.png" alt="mishka"  width="173" height="84"></a></li>
+          <li class="partners-item"><a class="Htmlacademy-reference" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML-Академия"><img src="img/index/parters/HTMLacademy.png" alt="" width="199" height="68"></a></li>
+          <li class="partners-item"><a class="borodinski-reference" href="" aria-label="Барбершоп Бородинский"><img src="img/index/parters/borodinski.png" alt=""  width="209" height="90"></a></li>
+          <li class="partners-item"><a class="pink-reference" href="" aria-label="Пинк"><img src="img/index/parters/pink.png" alt=""  width="185" height="52"></a></li>
+          <li class="partners-item"><a class="mishka-reference" href="" aria-label="Мишка"><img src="img/index/parters/mishka.png" alt=""  width="173" height="84"></a></li>
         </ul>
       </section>
+      <!-- Решил тут удалить альты. Их функцию возьмёт на себя aria-lable у ссылок. -->
     </main>
 
     <footer class="main-footer ">
@@ -139,7 +140,7 @@
               <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
               <address class="contacts-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
               <p class="contacts-phone-wrapper"><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
-              <button class="button button-red red-button-action contacts-button" type="submit">Напишите нам</button>
+              <button class="button button-red red-button-action contacts-button" type="button" aria-label="Открыть форму обратной связи">Напишите нам</button>
             </div>
           </div>
             <div id="map" class="map">
@@ -178,7 +179,7 @@
 
     <section class="contactform">
       <h2 class="visually-hidden">Контактная форма</h2>
-      <form class="contactform-grid" action="https://echo.htmlacademy.ru/" method="get">
+      <form class="contactform-grid" action="https://echo.htmlacademy.ru/" method="post">
           <h3 class="contactform-header">Напишите нам</h3>
           <div class="contactform-col-one">
             <p class="contactform-title"><label for="user-name">Ваше имя:</label></p>

@@ -308,6 +308,10 @@ img{
   outline: none;
 }
 
+.slider-controls button:focus {
+  box-shadow: 0px 0px 0px 2px var(--black, #000000);
+}
+
 .current::before {
   content: "";
   position: absolute;
@@ -329,10 +333,15 @@ img{
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*услуги */
@@ -485,7 +494,6 @@ img{
   padding-left: 8px;
 }
 
-
 .figure {
   font-weight: bold;
   font-size: 45px;
@@ -534,6 +542,11 @@ img{
   opacity: 0.2;
 }
 
+.partners-item a:focus {
+  opacity: 1;
+  outline: 2px solid var(--black, #000000);
+}
+/* В стайлгайде этого нету, но моё чувство прекрасного говорит что нужно сделать так.*/
 .Htmlacademy-reference {
   padding-top: 12px;
   padding-left: 11px;
@@ -1195,8 +1208,14 @@ img{
   display: table;
 }
 
-.socialnetworks-shape:hover {
+.socialnetworks-shape:hover,
+.socialnetworks-shape:focus {
   background-color: var(--hover-red, #e74246);
+}
+
+.socialnetworks-shape:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px var(--black, #000000);
 }
 
 .socialnetworks-shape:active {
@@ -1217,8 +1236,8 @@ img{
   line-height: 36px;
   max-width: 660px;
 }
-.discount {
 
+.discount {
   text-transform: none;
   margin-top: 0px;
   font-weight: normal;
@@ -1368,6 +1387,12 @@ textarea.contactform-data-input {
   outline: none;
   border-radius: 3px;
   padding: 15px 40px;
+}
+
+.button:focus {
+  box-shadow: 0px 0px 0px 2px var(--black, #000000);
+  /*outline: 2px solid var(--black, #000000);
+  outline-offset: -1px*/
 }
 
 .button-close {
