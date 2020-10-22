@@ -137,6 +137,10 @@ img{
   background-color: transparent;
 }
 
+.main-header-logo:focus{
+  outline: 3px solid black;
+  outline-offset: -3px;
+}
 .main-header-logo-pic {
   width: 160px;
   height: 66px;
@@ -174,7 +178,8 @@ img{
   margin-right: 0px;
 }
 
-.main-navigation a:hover {
+.main-navigation a:hover,
+.main-navigation a:focus {
   color: var(--basic-red, #fb565a);
 }
 
@@ -205,7 +210,8 @@ img{
  background-image: url("../img/cart-icon.svg");
 }
 
-.cart-icon:hover {
+.cart-icon:hover,
+.cart-refference:focus .cart-icon {
   color: var(--basic-red, #fb565a);
 }
 
@@ -817,6 +823,14 @@ img{
   opacity: 0.4;
 }
 
+.form-input-radio:focus + label::before {
+  outline: 3px solid var(--black, #000000);
+  opacity: 1;
+}
+.form-input-radio:focus + label::after {
+  opacity: 1;
+}
+
 .form-input-checkbox + label::before {
   content: "";
   background-image: url(../img/catalog/checkbox-off.svg);
@@ -840,21 +854,29 @@ img{
   opacity: 0.4;
 }
 
+.form-input-checkbox:focus + label::before {
+  outline: 3px solid var(--black, #000000);
+  opacity: 1;
+}
+
 .form-input-checkbox:hover + label::before,
 .form-input-radio:hover + label::before,
 .form-input-radio:hover + label::after {
   opacity: 1;
 }
 
-.disabled {
+.form-input-checkbox:disabled + label::before,
+.form-input-checkbox:disabled + label {
   color: var(--liter-black, #283136);
   opacity: 0.3;
 }
 
-.disabled:hover label::before,
-.disabled:hover label::after {
-  opacity: 0.1;
+.form-input-radio:disabled + label::before,
+.form-input-radio:disabled + label {
+  color: var(--liter-black, #283136);
+  opacity: 0.3;
 }
+/*Понял что был не прав. Исправился.*/
 
 .catalog-sorting {
   grid-column: 2/-1;
@@ -883,6 +905,7 @@ img{
   font-size: 14px;
   line-height: 18px;
   width: 360px;
+  margin: 0px;
 }
 
 .catalog-sorting-navigation-price {
@@ -907,11 +930,19 @@ img{
 
 
 .catalog-sorting-navigation a {
+  display: block;
+  padding: 14px 0px;
   color: var(--slightly-transparent-black, rgba(0, 0, 0, 0.3));
 }
 
-.catalog-sorting-navigation a:hover {
+.catalog-sorting-navigation a:hover,
+.catalog-sorting-navigation a:focus {
   color: var(--transparent-black, rgba(0, 0, 0, 0.6));
+}
+
+.sorting-arrow:focus .sorting-arrow-up,
+.sorting-arrow:focus .sorting-arrow-down {
+  fill-opacity: 1;
 }
 
 .catalog-sorting-navigation a:active {
@@ -962,12 +993,18 @@ img{
   opacity: 0;
   margin-left: 0px;
 }
+
 .catalog-products-frame:hover .catalog-products-popup {
  opacity: 1;
 }
 
 .catalog-products-frame:hover .catalog-products-cap {
  opacity: 1;
+}
+
+.catalog-products-frame:focus-within .catalog-products-cap,
+.catalog-products-frame:focus-within .catalog-products-popup {
+  opacity: 1;
 }
 
 .catalog-products-pic {
@@ -1003,9 +1040,12 @@ img{
   line-height: 30px;
   color: var(--black, #000000);
 }
-.catalog-products-header a:hover {
+
+.catalog-products-header a:hover,
+.catalog-products-header a:focus {
   color: var(--basic-red, #fb565a);
 }
+
 .catalog-products-header a:active {
   color: var(--transparent-black, rgba(0, 0, 0, 0.6));
 }
@@ -1020,6 +1060,11 @@ img{
   margin-bottom: 33px
 }
 
+.pagination {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
 .pagination-list {
   display: flex;
   justify-content: space-between;
@@ -1029,8 +1074,8 @@ img{
   font-size: 16px;
   line-height: 18px;
   width: 443px;
-  margin-top: 56px;
-  margin-left: 0px;
+  margin-top: 26px;
+  margin-left: 80px;
 }
 
 .pagination-item a {
@@ -1072,12 +1117,14 @@ img{
   padding: 14px 17px 12px 17px;
   background: var(--focus-black, rgba(0, 0, 0, 0.0001));
   border: 3px solid var(--pagination-grey, #dbdbdb);
+  outline:none;
 }
 
 .pagination-button-next a:focus {
   background: var(--focus-black, rgba(0, 0, 0, 0.0001));
   border: 3px solid var(--pagination-grey, #dbdbdb);
   padding: 14px 74px 12px 76px;
+  outline:none;
 }
 
 /*Тут будут контакты в футере*/
@@ -1449,7 +1496,8 @@ textarea.contactform-data-input {
   background-color: var(--lighter-grey, #eeeeee);
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus {
   background-color: var(--pagination-grey, #dfdfdf);
 }
 
@@ -1458,7 +1506,8 @@ textarea.contactform-data-input {
   box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
-.red-button-action:hover {
+.red-button-action:hover,
+.red-button-action:focus {
   background-color: var(--hover-red, #E74246);
 }
 
@@ -1468,7 +1517,8 @@ textarea.contactform-data-input {
   box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
-.service-green-button-action:hover {
+.service-green-button-action:hover,
+.service-green-button-action:focus {
   background-color: var(--hover-green, #00bc6c);
 }
 .service-green-button-action:active {
@@ -1477,7 +1527,8 @@ textarea.contactform-data-input {
   box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
-.service-yellow-button-action:hover {
+.service-yellow-button-action:hover,
+.service-yellow-button-action:focus {
   background-color: var(--hover-yellow, #eab534);
 }
 .service-yellow-button-action:active {
@@ -1486,7 +1537,8 @@ textarea.contactform-data-input {
   box-shadow: inset 0px 3px 0px var(--button-shadow, rgba(0, 1, 1, 0.1));
 }
 
-.button-close:hover {
+.button-close:hover,
+.button-close:focus {
   opacity: 1;
 }
 
