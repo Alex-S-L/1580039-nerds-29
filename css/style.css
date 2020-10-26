@@ -151,7 +151,7 @@ img{
 }
 
 .main-header-logo:active {
-  opacity: 0.3;
+  opacity: 0.303;
   outline: none;
 }
 
@@ -231,7 +231,7 @@ img{
 }
 
 .slider {
-  margin-top: -10px;
+  margin-top: -8px;
   position: relative;
 }
 
@@ -335,13 +335,11 @@ img{
   border: 2px solid var(--slider-button-grey, #c1c1c1);
   border-radius: 50%;
   background-color: var(--white, #ffffff);
-
 }
 
 .slide-current {
   display: block;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -355,8 +353,6 @@ img{
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-/*услуги */
 
 .services {
   margin-top: 80px;
@@ -394,7 +390,6 @@ img{
   padding-right: 60px;
   margin-bottom: 47px;
   width: 260px;
-
 }
 
 .aboutus {
@@ -470,7 +465,6 @@ img{
   margin-bottom: 25px;
   margin-right: -2px;
   padding-left: 23px;
-
 }
 
 .table-coll-one,
@@ -558,7 +552,7 @@ img{
   opacity: 1;
   outline: 2px solid var(--black, #000000);
 }
-/* В стайлгайде этого нету, но моё чувство прекрасного говорит что нужно сделать так.*/
+
 .Htmlacademy-reference {
   padding-top: 12px;
   padding-left: 11px;
@@ -603,11 +597,7 @@ img{
   opacity: 0.1;
 }
 
-
-
-
-
-/*Стили для внутренней страницы*/
+/*Внутренняя страница*/
 .catalog-page-header {
   font-weight: 500;
   font-size: 55px;
@@ -630,7 +620,6 @@ img{
   padding-left: 6px;
   grid-row-gap: 30px;
 }
-
 
 .filter {
   grid-column: 1/2;
@@ -677,7 +666,6 @@ img{
   background-color: var(--toggle-grey, #ababab);
   box-shadow: 0px 2px 1px var(--toggle-shadow-black, rgba(0, 0, 0, 0.15));
   cursor: pointer;
-
 }
 
 .toggle-min{
@@ -986,7 +974,6 @@ img{
   grid-row-gap: 32px;
 }
 
-
 .catalog-products-frame {
   border-radius: 5px;
   text-align: center;
@@ -1145,7 +1132,6 @@ img{
 
 .contacts-positioning {
   position: relative;
-
 }
 
 .map {
@@ -1189,7 +1175,6 @@ img{
 
 .contacts-address {
   font-style: normal;
-
 }
 
 .contacts-phone-wrapper {
@@ -1307,7 +1292,6 @@ img{
   columns: var(--dark-grey, #444444);
 }
 
-
 /*контактная форма*/
 .contactform {
   display: none;
@@ -1332,7 +1316,6 @@ img{
   z-index: 666;
   background-color: var(--white, #ffffff);
   box-shadow: 0px 20px 40px var(--contactform-black, rgba(0, 0, 0, 0.4));
-
 }
 
 .popup-visibility {
@@ -1341,6 +1324,7 @@ img{
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 .form-error {
   animation-name: shake;
   animation-duration: 100ms;
@@ -1481,7 +1465,7 @@ textarea.contactform-data-input {
   border: 2px solid var(--hover-red, #e74246);
 }
 
-/*Тут будут кнопки*/
+/*Кнопки*/
 .button {
   color: var(--white, #ffffff);
   font-weight: 500;

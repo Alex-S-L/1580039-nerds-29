@@ -1,6 +1,4 @@
 // Управление попапом
-
-
 let popup = document.querySelector('.contactform');
 let popupForm = popup.querySelector('.contactform-grid');
 let userName = popup.querySelector('[name="user-name"]');
@@ -32,7 +30,6 @@ popupForm.addEventListener('submit', function(evt){
 
 });
 // Слайдер
-// Так вроде по-симпатичнее
 let slides = document.querySelectorAll('.slider-item')
 let sliderButtons = document.querySelectorAll('.sider-controls-button')
 let addSliderToggle = function(slide, button) {
@@ -51,34 +48,6 @@ for (let i = 0; i < slides.length; i++) {
   addSliderToggle(slides[i], sliderButtons[i])
 }
 
-/*let sliderButtonOne = document.querySelector('.sider-controls-button-one');
-let sliderButtonTwo = document.querySelector('.sider-controls-button-two');
-let sliderButtonthree = document.querySelector('.sider-controls-button-three');
-sliderButtonOne.onclick = function() {
-  document.querySelector('.sider-controls-button-one').classList.add('current');
-  document.querySelector('.sider-controls-button-two').classList.remove('current');
-  document.querySelector('.sider-controls-button-three').classList.remove('current');
-  document.querySelector('.slider-image-one').classList.add('slide-current');
-  document.querySelector('.slider-image-two').classList.remove('slide-current');
-  document.querySelector('.slider-image-three').classList.remove('slide-current');
-};
-sliderButtonTwo.onclick = function() {
-  document.querySelector('.sider-controls-button-two').classList.add('current');
-  document.querySelector('.sider-controls-button-one').classList.remove('current');
-  document.querySelector('.sider-controls-button-three').classList.remove('current');
-  document.querySelector('.slider-image-two').classList.add('slide-current');
-  document.querySelector('.slider-image-one').classList.remove('slide-current');
-  document.querySelector('.slider-image-three').classList.remove('slide-current');
-};
-sliderButtonthree.onclick = function() {
-  document.querySelector('.sider-controls-button-three').classList.add('current');
-  document.querySelector('.sider-controls-button-two').classList.remove('current');
-  document.querySelector('.sider-controls-button-one').classList.remove('current');
-  document.querySelector('.slider-image-three').classList.add('slide-current');
-  document.querySelector('.slider-image-two').classList.remove('slide-current');
-  document.querySelector('.slider-image-one').classList.remove('slide-current');
-};*/
-
 // Карта
 let map;
 function initMap() {
@@ -92,5 +61,3 @@ title: 'Наш маркер: Большой театр',
 icon: 'img/map-marker.png'});
 google.maps.Map.prototype.markers = new Array();
 };
-
-
