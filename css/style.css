@@ -880,6 +880,7 @@ img{
 .catalog-sorting-wrapper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .catalog-sorting-header {
@@ -1009,7 +1010,6 @@ img{
 }
 
 .catalog-products-pic {
-  display: inline-block;
   position: absolute;
   top: 41px;
   left: 1px;
@@ -1535,6 +1535,7 @@ textarea.contactform-data-input {
   padding: 17px 89px 15px 88px;
   color: var(--black, #000000);
   background-color: var(--lighter-grey, #eeeeee);
+  cursor: pointer;
 }
 
 .filter-button:hover,
