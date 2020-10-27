@@ -1,8 +1,8 @@
 // Управление попапом
 let popup = document.querySelector('.contactform');
 let popupForm = popup.querySelector('.contactform-grid');
-let userName = popup.querySelector('[name="user-name"]');
-let userEmail = popup.querySelector('[name="email"]');
+let userName = popup.querySelector('.contactform-username');
+let userEmail = popup.querySelector('.contactform-email');
 let popupButtonOpen = document.querySelector('.contacts-button');
 let popupButtonClose = popup.querySelector('.button-close');
 popupButtonOpen.addEventListener('click', function(evt) {
@@ -51,7 +51,7 @@ for (let i = 0; i < slides.length; i++) {
 // Карта
 let map;
 function initMap() {
-map = new google.maps.Map(document.getElementById("map"), {
+map = new google.maps.Map(document.getElementById('map'), {
   center: { lat: 59.939103, lng: 30.321542 },
   zoom: 17,
 });

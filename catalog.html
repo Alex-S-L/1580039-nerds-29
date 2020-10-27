@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/minnormalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/minstyle.css">
     <title>catalog</title>
   </head>
@@ -30,225 +30,225 @@
     </header>
 
     <main class="catalog-page">
-        <h1 class="catalog-page-header">Магазин готовых шаблонов</h1>
+      <h1 class="catalog-page-header">Магазин готовых шаблонов</h1>
 
-        <div class="catalog-page-grid container">
-          <section class="filter">
-            <h2 class="visually-hidden">Фильтр шаблонов</h2>
-            <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="filter-form-group">
-                <legend class="visually-hidden">стоимость</legend>
-                <p class="filter-form-header filter-price-header">стоимость:</p>
-                <div class="filter-form-range">
-                  <div class="fiter-form-range-control">
-                    <div class="range">
-                      <div class="bar">
-                        <div class="toggle toggle-min" tabindex="0" aria-label="Минимальное значение"></div>
-                        <div class="toggle toggle-max" tabindex="0" aria-label="Максимальное значение"></div>
-                      </div>
+      <div class="catalog-page-grid container">
+        <section class="filter">
+          <h2 class="visually-hidden">Фильтр шаблонов</h2>
+          <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="filter-form-group">
+              <legend class="visually-hidden">стоимость</legend>
+              <p class="filter-form-header filter-price-header">стоимость:</p>
+              <div class="filter-form-range">
+                <div class="fiter-form-range-control">
+                  <div class="range">
+                    <div class="bar">
+                      <div class="toggle toggle-min" tabindex="0"><span class="visually-hidden">Минимальное значение</span></div>
+                      <div class="toggle toggle-max" tabindex="0"><span class="visually-hidden">Максимальное значение</span></div>
                     </div>
                   </div>
-                  <div class="filter-form-price-controls">
-                    <label class="filter-form-price-lable">от<input class="min-price" max="15000" min="0" placeholder="0" type="number" name="minprice" id="minprice"></label>
-                    <label class="filter-form-price-lable">до<input class="max-price" max="15000" min="0" placeholder="15&thinsp;000" type="number" name="maxprice" id="maxprice"></label>
-                  </div>
                 </div>
-              </fieldset>
-              <fieldset class="filter-form-group">
-                <legend class="visually-hidden">сетка</legend>
-                <p class="filter-form-header filter-grid-header">сетка:</p>
-                <ul class="filter-form-list">
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-radio" type="radio" name="grid" id="adaptive" checked><label for="adaptive">Адаптивная</label>
-                  </li>
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-radio" type="radio" name="grid" id="fixed"><label for="fixed">Фиксированная</label>
-                  </li>
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-radio" type="radio" name="grid" id="rubber"><label for="rubber">Резиновая</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="filter-form-group">
-                <legend class="visually-hidden">особенности</legend>
-                <p class="filter-form-header filter-features-header">особенности:</p>
-                <ul class="filter-form-list">
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-checkbox" type="checkbox" name="slider" id="slider" checked><label for="slider">Слайдер</label>
-                  </li>
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-checkbox" type="checkbox" name="advantage" id="advantage" disabled><label for="advantage">Блок преимуществ</label>
-                  </li>
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-checkbox" type="checkbox" name="news" id="news" checked><label for="news">Новости</label>
-                  </li>
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-checkbox" type="checkbox" name="gallery" id="gallery"><label for="gallery">Галерея</label>
-                  </li>
-                  <li class="filter-form-list-item">
-                    <input class="visually-hidden form-input-checkbox" type="checkbox" name="basket" id="basket"><label for="basket">Корзина</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <button class="button filter-button" type="submit">показать</button>
-            </form>
-          </section>
-
-          <div class="catalog-sorting">
-            <h2 class="visually-hidden">Каталог</h2>
-            <div class="catalog-sorting-wrapper">
-              <p class="catalog-sorting-header">сортировать:</p>
-              <ul class="catalog-sorting-navigation">
-                <li class="catalog-sorting-navigation-price"><a href="">по цене</a></li>
-                <li class="catalog-sorting-navigation-type"><a href="">по типу</a></li>
-                <li class="catalog-sorting-navigation-name"><a href="">по названию</a></li>
-                <li class="catalog-sorting-navigation-down">
-                  <a class="sorting-arrow" href="" aria-label="стрелка вниз">
-                    <svg width="11" height="10" focusable="false">
-                      <polyline class="sorting-arrow-down" points="0 0 5.5 10 11 0"/>
-                    </svg>
-                  </a>
+                <div class="filter-form-price-controls">
+                  <label class="filter-form-price-lable">от<input class="min-price" max="15000" min="0" placeholder="0" type="number" name="minprice" id="minprice"></label>
+                  <label class="filter-form-price-lable">до<input class="max-price" max="15000" min="0" placeholder="15&thinsp;000" type="number" name="maxprice" id="maxprice"></label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-form-group">
+              <legend class="visually-hidden">сетка</legend>
+              <p class="filter-form-header filter-grid-header">сетка:</p>
+              <ul class="filter-form-list">
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-radio" type="radio" name="grid" id="adaptive" checked><label for="adaptive">Адаптивная</label>
                 </li>
-                <li class="catalog-sorting-navigation-up">
-                  <a class="sorting-arrow" href="" aria-label="стрелка вверх">
-                    <svg width="11" height="10" focusable="false">
-                      <polyline class="sorting-arrow-up" points="0 10 5.5 0 11 10"/>
-                    </svg>
-                  </a>
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-radio" type="radio" name="grid" id="fixed"><label for="fixed">Фиксированная</label>
+                </li>
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-radio" type="radio" name="grid" id="rubber"><label for="rubber">Резиновая</label>
                 </li>
               </ul>
-            </div>
-          </div>
+            </fieldset>
+            <fieldset class="filter-form-group">
+              <legend class="visually-hidden">особенности</legend>
+              <p class="filter-form-header filter-features-header">особенности:</p>
+              <ul class="filter-form-list">
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-checkbox" type="checkbox" name="slider" id="slider" checked><label for="slider">Слайдер</label>
+                </li>
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-checkbox" type="checkbox" name="advantage" id="advantage" disabled><label for="advantage">Блок преимуществ</label>
+                </li>
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-checkbox" type="checkbox" name="news" id="news" checked><label for="news">Новости</label>
+                </li>
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-checkbox" type="checkbox" name="gallery" id="gallery"><label for="gallery">Галерея</label>
+                </li>
+                <li class="filter-form-list-item">
+                  <input class="visually-hidden form-input-checkbox" type="checkbox" name="basket" id="basket"><label for="basket">Корзина</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="button filter-button" type="submit">показать</button>
+          </form>
+        </section>
 
-          <section class="catalog-products">
-            <h2 class="visually-hidden"> Список продукции</h2>
-            <ul class="catalog-products-list">
-              <li class="catalog-products-item catalog-products-frame">
-                <h3 class="visually-hidden">sedona</h3>
-                  <svg class="catalog-products-cap" width="360" height="42" focusable="false" >
-                    <rect width="360" height="40" rx="4"/>
-                    <circle r="7" cx="23" cy="20"/>
-                    <circle r="7" cx="46" cy="20"/>
-                    <circle r="7" cx="69" cy="20"/>
-                    <rect width="360" height="6" y="35"/>
+        <div class="catalog-sorting">
+          <h2 class="visually-hidden">Каталог</h2>
+          <div class="catalog-sorting-wrapper">
+            <p class="catalog-sorting-header">сортировать:</p>
+            <ul class="catalog-sorting-navigation">
+              <li class="catalog-sorting-navigation-price"><a href="">по цене</a></li>
+              <li class="catalog-sorting-navigation-type"><a href="">по типу</a></li>
+              <li class="catalog-sorting-navigation-name"><a href="">по названию</a></li>
+              <li class="catalog-sorting-navigation-down">
+                <a class="sorting-arrow" href="" aria-label="стрелка вниз">
+                  <svg width="11" height="10" focusable="false">
+                    <polyline class="sorting-arrow-down" points="0 0 5.5 10 11 0"/>
                   </svg>
-                  <img class="catalog-products-pic" src="img/catalog/sedona.jpg" alt="" width="358" height="578">
-                  <div class="catalog-products-popup">
-                    <p class="catalog-products-header"><a href="" aria-label="Информационный сайт для туристов">sedona</a></p>
-                    <p class="catalog-products-info">Информационный сайт для&nbsp;туристов</p>
-                    <button class="button button-red catalog-products-button red-button-action" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</button>
-                  </div>
+                </a>
               </li>
-              <li class="catalog-products-item catalog-products-frame">
-                <h3 class="visually-hidden">pink app</h3>
-                  <svg class="catalog-products-cap" width="360" height="41" fill="transparent" focusable="false" >
-                    <rect width="360" height="40" rx="4"/>
-                    <circle r="7" cx="24" cy="20"/>
-                    <circle r="7" cx="47" cy="20"/>
-                    <circle r="7" cx="70" cy="20"/>
-                    <rect width="360" height="5" y="36"/>
+              <li class="catalog-sorting-navigation-up">
+                <a class="sorting-arrow" href="" aria-label="стрелка вверх">
+                  <svg width="11" height="10" focusable="false">
+                    <polyline class="sorting-arrow-up" points="0 10 5.5 0 11 10"/>
                   </svg>
-                  <img class="catalog-products-pic" src="img/catalog/pink-app.jpg" alt="" width="358" height="578">
-                  <div class="catalog-products-popup">
-                    <p class="catalog-products-header"><a href="" aria-label="Продуктовый лендинг приложения">pink app</a></p>
-                    <p class="catalog-products-info">Продуктовый лендинг приложения для iOS и Android</p>
-                    <button class="button button-red catalog-products-button red-button-action" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</button>
-                  </div>
-              </li>
-              <li class="catalog-products-item catalog-products-frame">
-                <h3 class="visually-hidden">barbershop</h3>
-                  <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
-                    <rect width="360" height="40" rx="4"/>
-                    <circle r="7" cx="24" cy="20"/>
-                    <circle r="7" cx="47" cy="20"/>
-                    <circle r="7" cx="70" cy="20"/>
-                    <rect width="360" height="5" y="35"/>
-                  </svg>
-                  <img class="catalog-products-pic" src="img/catalog/borodinski.jpg" alt="" width="358" height="578">
-                  <div class="catalog-products-popup">
-                    <p class="catalog-products-header"><a href="" aria-label="Сайт салона красоты">barbershop</a></p>
-                    <p class="catalog-products-info">Сайт салона красоты. Для&nbsp;мужчин, да.</p>
-                    <button class="button button-red catalog-products-button red-button-action" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</button>
-                  </div>
-              </li>
-              <li class="catalog-products-item catalog-products-frame">
-                <h3 class="visually-hidden">mishka</h3>
-                  <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
-                    <rect width="360" height="40" rx="4"/>
-                    <circle r="7" cx="24" cy="20"/>
-                    <circle r="7" cx="47" cy="20"/>
-                    <circle r="7" cx="70" cy="20" />
-                    <rect width="360" height="5" y="35"/>
-                  </svg>
-                  <img class="catalog-products-pic" src="img/catalog/mishka.jpg" alt="" width="358" height="578">
-                  <div class="catalog-products-popup">
-                    <p class="catalog-products-header"><a href="" aria-label="Интернет-магазин вязаных игрушек">mishka</a></p>
-                    <p class="catalog-products-info">Интернет-магазин вязаных игрушек</p>
-                    <button class="button button-red catalog-products-button red-button-action" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</button>
-                  </div>
-              </li>
-              <li class="catalog-products-item catalog-products-frame">
-                <h3 class="visually-hidden">a plus</h3>
-                  <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
-                    <rect width="360" height="40" rx="4"/>
-                    <circle r="7" cx="24" cy="20"/>
-                    <circle r="7" cx="47" cy="20"/>
-                    <circle r="7" cx="70" cy="20"/>
-                    <rect width="360" height="5" y="35"/>
-                  </svg>
-                  <img class="catalog-products-pic" src="img/catalog/A-plus.jpg" alt="" width="358" height="578">
-                  <div class="catalog-products-popup">
-                    <p class="catalog-products-header"><a href="" aria-label="Лендинг курсов повышения квалификации">a plus</a></p>
-                    <p class="catalog-products-info">Лендинг курсов повышения квалификации</p>
-                    <button class="button button-red catalog-products-button red-button-action" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</button>
-                  </div>
-              </li>
-              <li class="catalog-products-item catalog-products-frame">
-                <h3 class="visually-hidden">кваст</h3>
-                  <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
-                    <rect width="360" height="40" rx="4"/>
-                    <circle r="7" cx="24" cy="20"/>
-                    <circle r="7" cx="47" cy="20"/>
-                    <circle r="7" cx="70" cy="20"/>
-                    <rect width="360" height="5" y="35"/>
-                  </svg>
-                  <img class="catalog-products-pic" src="img/catalog/Kbast.jpg" alt="" width="358" height="578">
-                  <div class="catalog-products-popup">
-                    <p class="catalog-products-header"><a href="" aria-label="Промо-сайт производителя крафтового кваса">кваст</a></p>
-                    <p class="catalog-products-info">Промо-сайт производителя крафтового кваса</p>
-                    <button class="button button-red catalog-products-button red-button-action" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</button>
-                  </div>
+                </a>
               </li>
             </ul>
-          </section>
-              <div class="pagination">
-                <h2 class="visually-hidden">Навигация по страницам</h2>
-                <ul class="pagination-list">
-                   <li class="pagination-item-disabled">1</li>
-                   <li class="pagination-item"><a href="">2</a></li>
-                   <li class="pagination-item"><a href="">3</a></li>
-                   <li class="pagination-item pagination-button-next"><a href="">следующая</a></li>
-                </ul>
-              </div>
           </div>
-      </main>
+        </div>
 
-      <footer class="main-footer ">
+        <section class="catalog-products">
+          <h2 class="visually-hidden"> Список продукции</h2>
+          <ul class="catalog-products-list">
+            <li class="catalog-products-item catalog-products-frame">
+              <h3 class="visually-hidden">sedona</h3>
+              <svg class="catalog-products-cap" width="360" height="42" focusable="false" >
+                <rect width="360" height="40" rx="4"/>
+                <circle r="7" cx="23" cy="20"/>
+                <circle r="7" cx="46" cy="20"/>
+                <circle r="7" cx="69" cy="20"/>
+                <rect width="360" height="6" y="35"/>
+              </svg>
+              <img class="catalog-products-pic" src="img/catalog/sedona.jpg" alt="макет сайта для туристов" width="358" height="578">
+              <div class="catalog-products-popup">
+                <p class="catalog-products-header"><a href="" aria-label="Информационный сайт для туристов">sedona</a></p>
+                <p class="catalog-products-info">Информационный сайт для&nbsp;туристов</p>
+                <a class="button button-red catalog-products-button red-button-action" href="" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-products-item catalog-products-frame">
+              <h3 class="visually-hidden">pink app</h3>
+              <svg class="catalog-products-cap" width="360" height="41" fill="transparent" focusable="false" >
+                <rect width="360" height="40" rx="4"/>
+                <circle r="7" cx="24" cy="20"/>
+                <circle r="7" cx="47" cy="20"/>
+                <circle r="7" cx="70" cy="20"/>
+                <rect width="360" height="5" y="36"/>
+              </svg>
+              <img class="catalog-products-pic" src="img/catalog/pink-app.jpg" alt="макет продуктового лендинга приложения" width="358" height="578">
+              <div class="catalog-products-popup">
+                <p class="catalog-products-header"><a href="" aria-label="Продуктовый лендинг приложения">pink app</a></p>
+                <p class="catalog-products-info">Продуктовый лендинг приложения для iOS и Android</p>
+                <a class="button button-red catalog-products-button red-button-action" href="" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-products-item catalog-products-frame">
+              <h3 class="visually-hidden">barbershop</h3>
+              <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
+                <rect width="360" height="40" rx="4"/>
+                <circle r="7" cx="24" cy="20"/>
+                <circle r="7" cx="47" cy="20"/>
+                <circle r="7" cx="70" cy="20"/>
+                <rect width="360" height="5" y="35"/>
+              </svg>
+              <img class="catalog-products-pic" src="img/catalog/borodinski.jpg" alt="макет сайта салона красоты" width="358" height="578">
+              <div class="catalog-products-popup">
+                <p class="catalog-products-header"><a href="" aria-label="Сайт салона красоты">barbershop</a></p>
+                <p class="catalog-products-info">Сайт салона красоты. Для&nbsp;мужчин, да.</p>
+                <a class="button button-red catalog-products-button red-button-action" href="" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-products-item catalog-products-frame">
+              <h3 class="visually-hidden">mishka</h3>
+              <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
+                <rect width="360" height="40" rx="4"/>
+                <circle r="7" cx="24" cy="20"/>
+                <circle r="7" cx="47" cy="20"/>
+                <circle r="7" cx="70" cy="20" />
+                <rect width="360" height="5" y="35"/>
+              </svg>
+              <img class="catalog-products-pic" src="img/catalog/mishka.jpg" alt="макет магазина вязаных игрушек" width="358" height="578">
+              <div class="catalog-products-popup">
+                <p class="catalog-products-header"><a href="" aria-label="Интернет-магазин вязаных игрушек">mishka</a></p>
+                <p class="catalog-products-info">Интернет-магазин<br> вязаных игрушек</p>
+                <a class="button button-red catalog-products-button red-button-action" href="" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-products-item catalog-products-frame">
+              <h3 class="visually-hidden">a plus</h3>
+              <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
+                <rect width="360" height="40" rx="4"/>
+                <circle r="7" cx="24" cy="20"/>
+                <circle r="7" cx="47" cy="20"/>
+                <circle r="7" cx="70" cy="20"/>
+                <rect width="360" height="5" y="35"/>
+              </svg>
+              <img class="catalog-products-pic" src="img/catalog/a-plus.jpg" alt="макет лендинга образовательных курсов" width="358" height="578">
+              <div class="catalog-products-popup">
+                <p class="catalog-products-header"><a href="" aria-label="Лендинг курсов повышения квалификации">a plus</a></p>
+                <p class="catalog-products-info">Лендинг курсов повышения квалификации</p>
+                <a class="button button-red catalog-products-button red-button-action" href="" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</a>
+              </div>
+            </li>
+            <li class="catalog-products-item catalog-products-frame">
+              <h3 class="visually-hidden">кваст</h3>
+              <svg class="catalog-products-cap" width="360" height="40" fill="transparent" focusable="false" >
+                <rect width="360" height="40" rx="4"/>
+                <circle r="7" cx="24" cy="20"/>
+                <circle r="7" cx="47" cy="20"/>
+                <circle r="7" cx="70" cy="20"/>
+                <rect width="360" height="5" y="35"/>
+              </svg>
+              <img class="catalog-products-pic" src="img/catalog/kbast.jpg" alt="макет промо сайта производителя кваса" width="358" height="578">
+              <div class="catalog-products-popup">
+                <p class="catalog-products-header"><a href="" aria-label="Промо-сайт производителя крафтового кваса">кваст</a></p>
+                <p class="catalog-products-info">Промо-сайт производителя крафтового кваса</p>
+                <a class="button button-red catalog-products-button red-button-action" href="" aria-label="Поместить в корзину">9&thinsp;900 &#8381;</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+          <div class="pagination">
+            <h2 class="visually-hidden">Навигация по страницам</h2>
+            <ul class="pagination-list">
+               <li class="pagination-item-disabled">1</li>
+               <li class="pagination-item"><a href="">2</a></li>
+               <li class="pagination-item"><a href="">3</a></li>
+               <li class="pagination-item pagination-button-next"><a href="">следующая</a></li>
+            </ul>
+          </div>
+      </div>
+    </main>
+
+    <footer class="main-footer ">
 
       <section class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <div class="container contacts-positioning">
-            <div class="contacts-info">
-              <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
-              <address class="contacts-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
-              <p class="contacts-phone-wrapper"><a class="contacts-phone" href="tel:8(812)275-75-75"> тел. +7(812)275-75-75</a></p>
-              <button class="button button-red red-button-action contacts-button" type="submit">Напишите нам</button>
-            </div>
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="container contacts-positioning">
+          <div class="contacts-info">
+            <p class="contacts-header">NЁRDS DESIGN STUDIO</p>
+            <address class="contacts-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</address>
+            <p class="contacts-phone-wrapper"><a class="contacts-phone" href="tel:+78122757575"> тел. +7(812)275-75-75</a></p>
+            <button class="button button-red red-button-action contacts-button" type="submit">Напишите нам</button>
           </div>
-            <div id="map" class="map">
-              <div class="alternative-map"></div>
-            </div>
-        </section>
+        </div>
+        <div id="map" class="map">
+          <div class="alternative-map"></div>
+        </div>
+      </section>
 
       <section class="social-links container">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
@@ -282,22 +282,22 @@
     <section class="contactform">
       <h2 class="visually-hidden">Контактная форма</h2>
       <form class="contactform-grid" action="https://echo.htmlacademy.ru/" method="get">
-          <h3 class="contactform-header">Напишите нам</h3>
-          <div class="contactform-col-one">
-            <p class="contactform-title"><label for="user-name">Ваше имя:</label></p>
-            <input class="contactform-data-input data-input-text" type="text" pattern="[A-Za-zА-Яа-я]{1,20}" name="user-name" id="user-name" placeholder="Имя Фамилия">
-          </div>
-          <div class="contactform-col-two">
-            <p class="contactform-title"><label for="email">Ваш email:</label></p>
-            <input class="contactform-data-input data-input-text" type="text"  name="email" id="email" pattern="[^@]{1,}[@]{1}[^@]{1,}[^@]{2,4}" placeholder="email@example.com">
-          </div>
-          <div class="contactform-max-width">
-            <p class="contactform-title"><label for="letter">Текст письма:</label></p>
-            <textarea class="contactform-data-input" name="letter" id="letter" placeholder="В свободной форме"></textarea>
-          </div>
-          <div class="contactform-max-width">
-            <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
-          </div>
+        <h3 class="contactform-header">Напишите нам</h3>
+        <div class="contactform-col-one">
+          <p class="contactform-title"><label for="user-name">Ваше имя:</label></p>
+          <input class="contactform-data-input data-input-text contactform-username" type="text" pattern="[A-Za-zА-Яа-я]{1,20}" name="user-name" id="user-name" placeholder="Имя Фамилия">
+        </div>
+        <div class="contactform-col-two">
+          <p class="contactform-title"><label for="email">Ваш email:</label></p>
+          <input class="contactform-data-input data-input-text contactform-email" type="text" name="email" id="email" pattern="[^@]{1,}[@]{1}[^@]{1,}[^@]{2,4}" placeholder="email@example.com">
+        </div>
+        <div class="contactform-max-width">
+          <p class="contactform-title"><label for="letter">Текст письма:</label></p>
+          <textarea class="contactform-data-input" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="contactform-max-width">
+          <input class="button button-red red-button-action contactform-button" type="submit" name="submit" value="отправить">
+        </div>
       </form>
       <button class="button-close modal-close" type="button"><span class="visually-hidden">закрыть</span></button>
     </section>

@@ -71,7 +71,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
@@ -79,7 +79,6 @@ body {
   text-transform: uppercase;
   background-color: var(--white, #ffffff);
   min-width: 1157px;
-
 }
 
 a {
@@ -207,13 +206,13 @@ img{
 }
 
 .cart-icon::before {
- content: "";
+ content: '';
  width: 15px;
  height: 15px;
  position: absolute;
  left: 0px;
  top: 33px;
- background-image: url("../img/cart-icon.svg");
+ background-image: url('../img/cart-icon.svg');
 }
 
 .cart-icon:hover,
@@ -325,7 +324,7 @@ img{
 }
 
 .current::before {
-  content: "";
+  content: '';
   position: absolute;
   box-sizing: border-box;
   left: 5px;
@@ -438,7 +437,7 @@ img{
 }
 
 .aboutus-list-item:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 11px;
   left: -35px;
@@ -553,7 +552,7 @@ img{
   outline: 2px solid var(--black, #000000);
 }
 
-.Htmlacademy-reference {
+.htmlacademy-reference {
   padding-top: 12px;
   padding-left: 11px;
 }
@@ -571,7 +570,7 @@ img{
 }
 
 .partners-item:not(:nth-of-type(4n))::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 18px;
   right: -29px;
@@ -607,7 +606,7 @@ img{
   background-color: var(--lighter-grey, #eeeeee);
   margin: 0px;
   padding-top: 70px;
-  padding-bottom: 145px;
+  padding-bottom: 108px;
   padding-left: 3px;
 }
 
@@ -616,6 +615,7 @@ img{
   grid-template-columns: 1fr 2fr;
   grid-template-rows: min-content 1fr;
   grid-gap: 40px;
+  margin-top: 37px;
   margin-bottom: 44px;
   padding-left: 6px;
   grid-row-gap: 30px;
@@ -791,7 +791,7 @@ img{
 }
 
 .form-input-radio + label::before {
-  content: "";
+  content: '';
   position: absolute;
   left: -36px;
   top: -4px;
@@ -805,7 +805,7 @@ img{
 }
 
 .form-input-radio:checked + label::after {
-  content: "";
+  content: '';
   position: absolute;
   left: -28px;
   top: 4px;
@@ -826,7 +826,7 @@ img{
 }
 
 .form-input-checkbox + label::before {
-  content: "";
+  content: '';
   background-image: url(../img/catalog/checkbox-off.svg);
   background-repeat: no-repeat;
   position: absolute;
@@ -838,7 +838,7 @@ img{
 }
 
 .form-input-checkbox:checked + label::before {
-  content: "";
+  content: '';
   background-image: url(../img/catalog/checkbox-on.svg);
   position: absolute;
   left: -36px;
@@ -870,7 +870,6 @@ img{
   color: var(--liter-black, #283136);
   opacity: 0.3;
 }
-/*Понял что был не прав. Исправился.*/
 
 .catalog-sorting {
   grid-column: 2/-1;
@@ -1015,7 +1014,7 @@ img{
   left: 1px;
 }
 
-.catalog-products-pic[src*="sedona"] {
+.catalog-products-pic[src*='sedona'] {
   top: 40px;
 }
 
@@ -1024,7 +1023,7 @@ img{
   position: absolute;
   top: 389px;
   left: 0px;
-  padding: 0 55px 44px 55px;
+  padding: 0 55px 53px 55px;
   box-shadow: 0px 6px 15px var(--popup-shadow-black, rgba(0, 1, 1, 0.25));
   background-color: var(--lighter-grey, #eeeeee);
 }
@@ -1057,8 +1056,9 @@ img{
   font-size: 16px;
   line-height: 18px;
   color: var(--contact-form-grey, #666666);
+  width: 250px;
   margin-top: 0px;
-  margin-bottom: 33px
+  margin-bottom: 48px
 }
 
 .pagination {
@@ -1128,7 +1128,7 @@ img{
   outline:none;
 }
 
-/*Тут будут контакты в футере*/
+/*контакты в футере*/
 
 .contacts-positioning {
   position: relative;
@@ -1216,7 +1216,7 @@ img{
 }
 
 .vk {
-  background-image: url(../img/index/icons/VK.svg);
+  background-image: url(../img/index/icons/vk.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 12px;
@@ -1226,7 +1226,7 @@ img{
 }
 
 .fb {
-  background-image: url(../img/index/icons/Facebook.svg);
+  background-image: url(../img/index/icons/facebook.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 12px;
@@ -1236,7 +1236,7 @@ img{
 }
 
 .instagram {
-  background-image: url(../img/index/icons/Instagram.svg);
+  background-image: url(../img/index/icons/instagram.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 12px;
@@ -1511,7 +1511,7 @@ textarea.contactform-data-input {
 }
 
 .catalog-products-button {
-  padding: 17px 72px 15px 73px;
+  padding: 17px 72px 14px 73px;
 }
 
 .slider-button {
